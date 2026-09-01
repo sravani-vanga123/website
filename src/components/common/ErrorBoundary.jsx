@@ -50,7 +50,7 @@ class ErrorBoundary extends Component {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button
                 onClick={this.handleReload}
-                className="w-full sm:w-auto bg-sky-500 hover:bg-sky-600 text-white font-semibold px-6 py-2.5 rounded-lg transition duration-200 shadow-md"
+                className="w-full sm:w-auto bg-#A202F0 hover:bg-sky-600 text-white font-semibold px-6 py-2.5 rounded-lg transition duration-200 shadow-md"
               >
                 Reload Page
               </button>

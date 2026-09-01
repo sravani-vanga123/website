@@ -225,7 +225,7 @@ const Careers = () => {
               { title: "Team Outings", desc: "Annual retreats, weekend getaways, and monthly team dinners." }
             ].map((perk, i) => (
               <div key={i} className="flex gap-4 p-5 rounded-xl hover:bg-gray-50 transition duration-200">
-                <div className="h-10 w-10 flex-shrink-0 rounded-lg bg-sky-50 flex items-center justify-center text-sky-500 font-bold">
+                <div className="h-10 w-10 flex-shrink-0 rounded-lg bg-#A202F0 flex items-center justify-center text-#A202F0 font-bold">
                   ✓
                 </div>
                 <div>
@@ -269,7 +269,7 @@ const Careers = () => {
                         <span className="flex items-center gap-1"><Briefcase size={14} /> {job.experience}</span>
                       </div>
                     </div>
-                    <div className={`p-2 rounded-full border transition duration-300 ${isOpen ? 'bg-sky-500 text-white border-sky-500' : 'text-gray-400 bg-white border-gray-200'}`}>
+                    <div className={`p-2 rounded-full border transition duration-300 ${isOpen ? 'bg-#A202F0 text-white border-#A202F0' : 'text-gray-400 bg-white border-gray-200'}`}>
                       <ChevronDown size={20} className={`transform transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
                     </div>
                   </button>

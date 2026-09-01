@@ -126,7 +126,7 @@ const HomeTeam = () => {
                 >
                     <Link 
                         to="/team" 
-                        className="btn bg-sky-500 hover:bg-sky-600 text-white border-none rounded-lg px-8 gap-2 group"
+                        className="btn bg-#A202F0 hover:bg-sky-600 text-white border-none rounded-lg px-8 gap-2 group"
                     >
                         Meet Our Full Team
                         <FaArrowRight className="group-hover:translate-x-1 transition-transform" />

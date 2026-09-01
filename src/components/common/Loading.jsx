@@ -21,7 +21,7 @@ const Loading = () => {
         
         {/* Inner Spinner */}
         <motion.div
-          className="absolute inset-0 h-20 w-20 rounded-full border-t-4 border-sky-500"
+          className="absolute inset-0 h-20 w-20 rounded-full border-t-4 border-#A202F0"
           animate={{ rotate: 360 }}
           transition={{
             duration: 1,
@@ -32,7 +32,7 @@ const Loading = () => {
         
         {/* Center Dot */}
         <motion.div
-          className="absolute left-1/2 top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-sky-500"
+          className="absolute left-1/2 top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-#A202F0"
           animate={{
             scale: [1, 1.5, 1],
           }}

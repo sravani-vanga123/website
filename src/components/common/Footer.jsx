@@ -67,7 +67,7 @@ const Footer = () => {
                                     href={social.url} 
                                     target="_blank" 
                                     rel="noopener noreferrer"
-                                    className="text-white border border-white p-2 rounded-full hover:bg-white hover:text-[#1C2028] transition-colors"
+                                    className="text-white border border-white p-2 rounded-full hover:bg-white hover:text-[#A202F0] transition-colors"
                                 >
                                     <social.icon className="h-4 w-4" />
                                 </a>

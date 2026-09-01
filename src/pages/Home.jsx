@@ -7,12 +7,12 @@ import Hero from '../components/Home/Hero';
 import Service from '../components/Home/Service';
 import Choice from '../components/Home/Choice';
 import Testimonial from '../components/Home/Testimonial';
-import Showcase from '../components/Home/Showcase';
+
 import Partner from '../components/Home/Partner';
 import MarketingCTA from '../components/Home/MarketingCTA';
 import IdeaCTA from '../components/Home/IdeaCTA';
-import FAQ from '../components/Home/FAQ';
-import Industries from '../components/Home/Industries';
+
+
 import Youridea from '../components/Home/Youridea';
 // import Client from '../components/Home/Client';
 // import Join from '../components/Home/Join';
@@ -37,13 +37,13 @@ const Home = () => {
             <MarketingCTA/>
             <ProcessSection/>
             
-            <Showcase/>
+          
             <Partner/>
             <Youridea/>
             <Testimonial/>
             
-            <Industries/>
-            <FAQ/>
+      
+          
             <IdeaCTA/>
             {/* <Join/> */}
             {/* <Client/> */}

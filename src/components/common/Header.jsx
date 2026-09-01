@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { NavLink, Link } from "react-router-dom";
 import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react'; 
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion'; 
-import Logo from '../../assets/Logo.png'; 
+import Logo from '../../assets/image.png'; 
 
 // ... (NAV_ITEMS and other components remain same)
 
@@ -91,7 +91,7 @@ const DesktopSubItem = ({ item }) => {
             <li className="relative group">
                 <span className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer">
                     {item.title}
-                    <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-sky-500 transition-transform duration-200" />
+                    <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-#A202F0 transition-transform duration-200" />
                 </span>
                 {/* Nested Flyout */}
                 <div className="hidden group-hover:block absolute left-full top-0 w-64 bg-white dark:bg-gray-800 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-20">
@@ -107,7 +107,7 @@ const DesktopSubItem = ({ item }) => {
             <NavLink 
                 to={item.path} 
                 className={({ isActive }) => `block px-4 py-2 text-sm transition-colors ${
-                    isActive ? 'text-sky-500 bg-sky-50 dark:bg-sky-900/20 font-semibold' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                    isActive ? 'text-#A202F0 bg-#A202F0 dark:bg-sky-900/20 font-semibold' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                 }`}
             >
                 {item.title}
@@ -127,9 +127,9 @@ const DesktopDropdown = ({ item }) => {
             onMouseEnter={() => setIsOpen(true)}
             onMouseLeave={() => setIsOpen(false)}
         >
-            <button className="flex items-center font-medium transition-colors hover:text-sky-600 dark:hover:text-sky-400 text-gray-700 dark:text-gray-300 py-2">
+            <button className="flex items-center font-medium transition-colors hover:text-sky-600 dark:hover:text-[#A202F0] text-gray-700 dark:text-gray-300 py-2">
                 {item.title}
-                <ChevronDown className={`ml-1 h-4 w-4 transform transition-transform duration-200 ${isOpen ? 'rotate-180 text-sky-500' : ''}`} />
+                <ChevronDown className={`ml-1 h-4 w-4 transform transition-transform duration-200 ${isOpen ? 'rotate-180 text-#A202F0' : ''}`} />
             </button>
             
             <AnimatePresence>
@@ -157,8 +157,8 @@ const DesktopNavItem = ({ item }) => (
     <li>
         <NavLink 
             to={item.path} 
-            className={({ isActive }) => `font-medium transition-colors hover:text-sky-600 dark:hover:text-sky-400 ${
-                isActive ? 'text-sky-500 dark:text-sky-400 font-semibold' : 'text-gray-700 dark:text-gray-300'
+            className={({ isActive }) => `font-medium transition-colors hover:text-sky-600 dark:hover:text-[#A202F0] ${
+                isActive ? 'text-#A202F0 dark:text-[#A202F0] font-semibold' : 'text-gray-700 dark:text-gray-300'
             }`}
         >
             {item.title}
@@ -174,8 +174,8 @@ const MobileNavItem = ({ item, closeMenu, level = 0 }) => {
     const hasChildren = item.subItems && item.subItems.length > 0;
 
     // Base styling for links
-    const linkBase = "block py-2 text-base font-medium transition-colors hover:text-sky-600 dark:hover:text-sky-400 text-gray-700 dark:text-gray-300 w-full text-left flex justify-between items-center";
-    const activeClass = "text-sky-500 dark:text-sky-400 font-semibold";
+    const linkBase = "block py-2 text-base font-medium transition-colors hover:text-sky-600 dark:hover:text-[#A202F0] text-gray-700 dark:text-gray-300 w-full text-left flex justify-between items-center";
+    const activeClass = "text-#A202F0 dark:text-[#A202F0] font-semibold";
     
     // Dynamic padding based on nesting level (Service > Organic > SEO)
     const paddingLeft = level === 0 ? "" : "pl-4";
@@ -189,7 +189,7 @@ const MobileNavItem = ({ item, closeMenu, level = 0 }) => {
                     className={linkBase}
                 >
                     {item.title}
-                    <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180 text-sky-500' : 'text-gray-400'}`} />
+                    <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180 text-#A202F0' : 'text-gray-400'}`} />
                 </button>
                 
                 <AnimatePresence>
@@ -257,10 +257,10 @@ const Header = () => {
 
     return (
         <>
-            <header className="sticky top-0 z-50 bg-white/95 dark:bg-gray-900/95 shadow-lg backdrop-blur-sm border-b border-gray-100 dark:border-gray-800">
+<header className="sticky top-0 z-50 bg-black/95 dark:bg-purple-900/95 shadow-lg backdrop-blur-sm border-b border-gray-100 dark:border-gray-800 text-white [&_a]:text-white [&_a:hover]:text-[#A202F0]">
                 {/* Scroll Progress Bar */}
                 <motion.div
-                    className="absolute bottom-0 left-0 right-0 h-1 bg-sky-500 origin-left z-50"
+                    className="absolute bottom-0 left-0 right-0 h-1 bg-#A202F0 origin-left z-50"
                     style={{ scaleX }}
                 />
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -287,7 +287,7 @@ const Header = () => {
                         {/* CTA & Mobile Toggle */}
                         <div className="flex items-center">
                             <div className="hidden lg:flex items-center ml-4">
-                                <Link to="/contact" className="px-5 py-2 text-sm font-semibold rounded-full text-white bg-sky-500 hover:bg-sky-600 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105">
+                                <Link to="/contact" className="px-5 py-2 text-sm font-semibold rounded-full text-white bg-#A202F0 hover:bg-sky-600 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105">
                                     Get Quote
                                 </Link>
                             </div>

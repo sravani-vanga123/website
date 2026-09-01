@@ -36,7 +36,7 @@ const Businesschanger = () => {
                         {/* Primary Button */}
                   <Link
   to="/technology-transformation"
-  className="group inline-flex items-center justify-center px-8 py-3 text-white text-base font-semibold rounded-lg shadow-md bg-sky-500 hover:bg-sky-600 transition-all duration-300"
+  className="group inline-flex items-center justify-center px-8 py-3 text-white text-base font-semibold rounded-lg shadow-md bg-#A202F0 hover:bg-sky-600 transition-all duration-300"
 >
   Read More
   <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />

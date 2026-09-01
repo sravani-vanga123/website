@@ -40,7 +40,7 @@ const FeatureCard = ({ icon: Icon, title, description, index }) => (
     <motion.div 
       animate={floatingAnimation}
       transition={{ delay: index * 0.2 }}
-      className="bg-sky-50 p-4 rounded-xl text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-colors duration-300"
+      className="bg-#A202F0 p-4 rounded-xl text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-colors duration-300"
     >
       <Icon className="w-8 h-8" /> 
     </motion.div>
@@ -80,13 +80,13 @@ const HeroContent = () => (
       className="flex flex-col sm:flex-row gap-4"
     >
       <Link to="/contact" className="w-full sm:w-auto">
-        <motion.button 
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="btn btn-primary bg-primary hover:bg-sky-600 border-none text-white shadow-xl shadow-sky-500/20 normal-case text-lg px-10 h-14 min-h-0 rounded-xl flex items-center justify-center w-full"
-        >
-          Request Consultation
-        </motion.button>
+        <motion.button
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  className="btn btn-primary bg-[#A202F0] hover:bg-[#A202F0] border-none text-white shadow-xl shadow-[#A202F0]/20 normal-case text-lg px-10 h-14 min-h-0 rounded-xl flex items-center justify-center w-full"
+>
+  Request Consultation
+</motion.button>
       </Link>
     </motion.div>
   </div>

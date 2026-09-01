@@ -6,7 +6,7 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply antialiased text-gray-900 bg-white dark:bg-gray-900;
   }
@@ -21,11 +21,11 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-sky-500 rounded-full border-2 border-gray-100 dark:border-gray-800;
+    @apply bg-[#A202F0] rounded-full border-2 border-gray-100 dark:border-gray-800;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-sky-600;
+    @apply bg-[#A202F0];
   }
 }
 
@@ -35,42 +35,83 @@
   }
 }
 
-/* |--------------------------------------------------------------------------
-| Global/Root Styles
-|--------------------------------------------------------------------------
-*/
+/* =========================================
+   Global / Root Styles
+========================================= */
+
 #root {
-  @apply max-w-[1660px] mx-auto ;
+  @apply max-w-[1660px] mx-auto;
 }
 
+/* =========================================
+   Custom Components
+========================================= */
 
-/* |--------------------------------------------------------------------------
-| Custom Components using @apply 
-|--------------------------------------------------------------------------
-*/
-
-/* * .font-title: Custom typeface application. */
 .font-title {
   font-family: 'Alfa Slab One', sans-serif;
 }
 
-/* * .dot: A simple styled bullet point. */
 .dot {
-  @apply inline-block w-2 h-2 bg-black rounded-full mr-2; 
+  @apply inline-block w-2 h-2 bg-black rounded-full mr-2;
 }
 
-/* * .dot2: A list item style - REPLACED 'list-square' with 'list-disc' */
 .dot2 {
-  @apply list-disc ml-3; 
+  @apply list-disc ml-3;
 }
 
+/* =========================================
+   Video Container
+========================================= */
 
-/* * .video-container: Ensures videos maintain a 16:9 aspect ratio and scale responsively. */
 .video-container {
   @apply relative w-full;
-  padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+  padding-bottom: 56.25%;
 }
 
 .video-container iframe {
   @apply absolute top-0 left-0 w-full h-full;
+}
+
+/* =========================================
+   Primary Purple Color
+========================================= */
+
+.bg-primary {
+  background-color: #A202F0;
+}
+
+.text-primary {
+  color: #A202F0;
+}
+
+.border-primary {
+  border-color: #A202F0;
+}
+
+/* =========================================
+   Purple Button
+   Normal  : Purple background + White text
+   Hover   : White background + Purple text
+========================================= */
+
+.btn-purple {
+  background-color: #A202F0;
+  color: white;
+  border: 2px solid #A202F0;
+  transition: all 0.3s ease;
+}
+
+.btn-purple:hover {
+  background-color: white;
+  color: #A202F0;
+  border-color: #A202F0;
+}
+
+/* =========================================
+   Selection Color
+========================================= */
+
+::selection {
+  background-color: #A202F0;
+  color: white;
 }
