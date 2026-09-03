@@ -49,7 +49,7 @@ const ContactUs = () => {
                         title: 'Success!',
                         text: 'Your message has been sent successfully.',
                         icon: 'success',
-                        confirmButtonColor: '#3B82F6' // Matches primary blue
+                        confirmButtonColor: '#A202F0' // Matches primary blue
                     });
                     
                     // Reset Form
@@ -115,50 +115,51 @@ const ContactUs = () => {
                 <div className="lg:col-span-1 bg-white p-8 shadow-xl rounded-lg border border-gray-100 h-fit">
                     <div className="mb-8 border-b pb-4">
                         <h2 className="text-xl font-bold text-gray-800 flex items-center mb-2">
-                            <HiOutlineMapPin className="text-blue-600 mr-2" /> BD OFFICE
+                            <HiOutlineMapPin className="text-[#A202F0] mr-2" /> BD OFFICE
                         </h2>
                         <p className="text-gray-600 ml-6">
-                            Shaymoli 3 no road, House no. 27/1/B, <br />
-                            Apon Heights, Flat 10-B Dhaka
+                           9-7-054, Near Sri Sai Junior College,
+Bezawada gardens,
+Yanam-533464
                         </p>
                         <p className="text-gray-600 mt-2 ml-6 flex items-center">
-                            <FaPhoneAlt className="text-sm mr-2 text-blue-600" /> (+880) 1332776617
+                            <FaPhoneAlt className="text-sm mr-2 text-[#A202F0]" /> +919390605958
                         </p>
                     </div>
 
-                    <div className="mb-8 border-b pb-4">
-                        <h2 className="text-xl font-bold text-gray-800 flex items-center mb-2">
-                            <HiOutlineMapPin className="text-blue-600 mr-2" /> US OFFICE
-                        </h2>
-                        <p className="text-gray-600 ml-6">
-                           3414-3498 Normandy Brk Rd Dallas<br />
-                            TX 75212, USA
-                        </p>
-                        <p className="text-gray-600 mt-2 ml-6 flex items-center">
-                            <FaPhoneAlt className="text-sm mr-2 text-blue-600" /> +1-817-412-9800
-                        </p>
-                    </div>
+                   
 
                     <div className="mb-8 border-b pb-4">
-                        <h2 className="text-xl font-bold text-gray-800 mb-2">Talk to us</h2>
-                        <p className="text-gray-600 mt-2 ml-0 flex items-center">
-                            <FaEnvelope className="text-sm mr-2 text-blue-600" /> sales@datait.com.bd
-                        </p>
-                    </div>
+    <h2 className="text-xl font-bold text-gray-800 mb-2">
+        Talk to us
+    </h2>
+
+    <p className="text-gray-600 mt-2 ml-0 flex items-center">
+        <FaEnvelope className="text-sm mr-2 text-[#A202F0]" />
+        connect@moinconsultancy.com
+    </p>
+</div>
 
                     <div className="mb-4">
                         <h2 className="text-xl font-bold text-gray-800 mb-2">Opening hour</h2>
                         <p className="text-gray-600 mt-2 ml-0 flex items-center">
-                            <FaClock className="text-sm mr-2 text-blue-600" /> Monday-Friday
+                            <FaClock className="text-sm mr-2 text-[#A202F0]" /> Monday-Saturday
                         </p>
-                        <p className="text-gray-600 ml-6">10:00 a.m. - 7:00 p.m.</p>
+                        <p className="text-gray-600 ml-6">9:00 a.m. - 7:00 p.m.</p>
                     </div>
                 </div>
 
                 {/* --- Right Column: Contact Form --- */}
-                <div className="lg:col-span-2 p-8 shadow-xl rounded-lg bg-gray-50 border border-gray-200">
-                    <p className="text-sm font-semibold text-blue-600 mb-1">MESSAGE US, CONNECT HERE</p>
-                    <h2 className="text-3xl font-bold text-gray-800 mb-6">Drop Us a Quick Message</h2>
+{/* --- Right Column: Contact Form --- */}
+<div className="lg:col-span-2 p-8 shadow-xl rounded-lg bg-gray-50 border border-gray-200">
+    <p className="text-sm font-semibold text-[#A202F0] mb-1">
+        MESSAGE US, CONNECT HERE
+    </p>
+
+    <h2 className="text-3xl font-bold text-gray-800 mb-6">
+        Drop Us a Quick Message
+    </h2>
+
                     
                     <p className="text-gray-600 mb-6">
                         We'll love to hear from you. Please complete the form below and share your requirements.
@@ -222,13 +223,17 @@ const ContactUs = () => {
                             </div>
                         </div>
 
-                        <button 
-                            type="submit" 
-                            className={`w-full sm:w-auto px-8 py-3 rounded-md font-bold text-white transition-all ${captchaCorrect ? 'bg-primary hover:bg-blue-700' : 'bg-gray-400 cursor-not-allowed'}`}
-                            disabled={!captchaCorrect}
-                        >
-                            Send Message
-                        </button>
+                       <button
+    type="submit"
+    className={`w-full sm:w-auto px-8 py-3 rounded-md font-bold text-white transition-all ${
+        captchaCorrect
+            ? 'bg-[green] hover:bg-[#8500C7]'
+            : 'bg-[#A202F0] cursor-not-allowed'
+    }`}
+    disabled={!captchaCorrect}
+>
+    Send Message
+</button>
                     </form>
                 </div>
             </div>

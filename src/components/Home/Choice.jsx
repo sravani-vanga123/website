@@ -22,10 +22,11 @@ const Choice = () => {
                     <div className="order-2 lg:order-1 flex flex-col items-start text-left">
 
                         {/* Modern Pill Badge */}
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#A202F0]/10 text-[#A202F0] text-sm font-bold tracking-wide uppercase mb-6">
-                            <span className="w-2 h-2 rounded-full bg-[#A202F0] animate-pulse"></span>
-                            Why Choose DataIT
-                        </div>
+                       {/* Modern Pill Badge */}
+<div className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#A202F0]/10 text-[#A202F0] text-base font-bold tracking-wide uppercase mb-6">
+    <span className="w-2.5 h-2.5 rounded-full bg-[#A202F0] animate-pulse"></span>
+    Why Choose Moin Consultancy
+</div>
 
                         {/* Headline */}
                         <h2 className="text-4xl md:text-6xl font-black text-base-content mb-6 leading-[1.1] tracking-tight">
@@ -107,7 +108,7 @@ const Choice = () => {
                                     </p>
 
                                     <p className="text-lg font-bold text-base-content">
-                                        100% Client Satisfaction
+                                        98% Client Satisfaction
                                     </p>
                                 </div>
 
@@ -120,21 +121,21 @@ const Choice = () => {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
 
                     <StatCard
-                        number="21"
+                        number="20"
                         label="Projects Delivered"
                         suffix="+"
                     />
 
                     <StatCard
-                        number="16"
-                        label="Happy Customers"
-                        suffix=""
+                        number="500"
+                        label="Students Counselled"
+                        suffix="+"
                     />
 
                     <StatCard
-                        number="03"
-                        label="Global Clients"
-                        suffix=""
+                        number="98"
+                        label="Clients Satisfaction"
+                        suffix="+"
                     />
 
                     <StatCard

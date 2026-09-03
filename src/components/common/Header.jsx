@@ -1,114 +1,266 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react'; 
-import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion'; 
-import Logo from '../../assets/image.png'; 
+import {
+    Menu,
+    X,
+    ChevronDown,
+    ChevronRight,
+} from "lucide-react";
+import {
+    motion,
+    AnimatePresence,
+    useScroll,
+    useSpring,
+} from "framer-motion";
+import Logo from "../../assets/image.png";
 
-// ... (NAV_ITEMS and other components remain same)
+// ======================================================
+// NAVIGATION DATA
+// ======================================================
 
 const NAV_ITEMS = [
-    { title: "Home", path: "/" },
-    { title: "About", path: "/about" },
-    { 
-        title: "Service", 
-        path: "#", 
+    {
+        title: "Home",
+        path: "/",
+    },
+    {
+        title: "About",
+        path: "/about",
+    },
+    {
+        title: "Service",
+        path: "#",
         subItems: [
-            { 
-                title: "Organic Growth", 
+            {
+                title: "Education",
                 path: "#",
                 subItems: [
-                    { title: "SEO for Travel Agents", path: "/seo-travel" },
-                    { title: "SEO for Garments", path: "/seo-garments" },
-                    { title: "SEO for E-Commerce", path: "/seo-ecommerce" },
-                    { title: "Professional SEO", path: "/seo-professional" },
-                    { title: "Local SEO", path: "/seo-local" },
-                ]
-            },
-            { 
-                title: "SMM", 
-                path: "/smm", 
-                subItems: [
-                    { title: "Social Media Marketing", path: "/social-media-marketing" },
-                ]
+                    {
+                        title: "Career Counselling",
+                        path: "/seo-travel",
+                    },
+                    {
+                        title: "Internship",
+                        path: "/seo-garments",
+                    },
+                    {
+                        title: "Study Abroad",
+                        path: "/seo-ecommerce",
+                    },
+                    {
+                        title: "Training",
+                        path: "/seo-professional",
+                    },
+                    {
+                        title: "University Admissions",
+                        path: "/seo-local",
+                    },
+                ],
             },
             {
-                title: "Website and Content",
-                path: "#",
+                title: "Technology",
+                path: "/smm",
                 subItems: [
-                    { title: "Web Design & Development", path: "/web-dev" },
-                    { title: "Ecommerce Website", path: "/ecommerce-website" },
-                    { title: "Website Maintenance", path: "/website-maintenance" },
-                    { title: "Custom Web Application Development", path: "/custom-web-app" },
-                ]
+                    {
+                        title: "Cloud Solutions",
+                        path: "/social-media-marketing",
+                    },
+                     {
+                        title: "Cyber Security",
+                        path: "/social-media-marketing",
+                    },
+                    {
+                        title: "Digital Marketing",
+                        path: "/social-media-marketing",
+                    },
+                    {
+                        title: "UI/Ux Design",
+                        path: "/social-media-marketing",
+                    },
+                  {
+                        title: "Web Development",
+                        path: "/social-media-marketing",
+                    },
+
+                ],
             },
             {
-                title: "Branding",
+                title: "Immigration",
                 path: "#",
                 subItems: [
-                    { title: "Corporate Branding", path: "/corporate-branding" },
-                    { title: "Personal Branding", path: "/personal-branding" },
-                    { title: "Re Branding", path: "/re-branding" },
-                ]
+                    {
+                        title: "Australia",
+                        path: "/web-dev",
+                    },
+                    {
+                        title: "Canada",
+                        path: "/ecommerce-website",
+                    },
+                    {
+                        title: "LatviaTrp",
+                        path: "/website-maintenance",
+                    },
+                    
+                ],
             },
             {
-                title: "Software",
+                title: "Logistics",
                 path: "#",
                 subItems: [
-                    { title: "Restaurant Management System", path: "/rms" },
-                    { title: "Gym Management System", path: "/gms" },
-                    { title: "Rice Mill Management System", path: "/ricemms" },
-                ]
+                    {
+                        title: "Freight Forwarding",
+                        path: "/corporate-branding",
+                    },
+                    {
+                        title: "Imports & Exports",
+                        path: "/personal-branding",
+                    },
+                   
+                ],
             },
             {
-                title: "Design",
+                title: "Renewable Energy",
                 path: "#",
                 subItems: [
-                    { title: "UI UX Design", path: "/ui-ux" },
-                    { title: "Graphic Design", path: "/graphic-design" },
-                ]
+                    {
+                        title: "Solar",
+                        path: "/rms",
+                    },
+                    
+                ],
             },
             {
-                title: "Others",
+                title: "Manufacturing",
                 path: "#",
                 subItems: [
-                    { title: "Video Production", path: "/video-production" },
-                    { title: "PR Agency", path: "/pr-agency" },
-                ]
+                    {
+                        title: "Cosmetics",
+                        path: "/ui-ux",
+                    },
+                    {
+                        title: "Electronics",
+                        path: "/graphic-design",
+                    },
+                ],
             },
+            ,
         ],
     },
-    { title: "Portfolios", path: "/portfolios" },
-    { title: "Blog", path: "/blog" },
-    { title: "Contact", path: "/contact" },
+    {
+        title: "Portfolios",
+        path: "/portfolios",
+    },
+    {
+        title: "Blog",
+        path: "/blog",
+    },
+    {
+        title: "Contact",
+        path: "/contact",
+    },
 ];
 
-// --- 1. Desktop Dropdown Components ---
+// ======================================================
+// DESKTOP SUB ITEM
+// ======================================================
 
 const DesktopSubItem = ({ item }) => {
-    // Used for Level 2+ items in Desktop (e.g. Organic Growth)
-    if (item.subItems) {
+    // ==================================================
+    // HAS NESTED SUBMENU
+    // ==================================================
+
+    if (item.subItems && item.subItems.length > 0) {
         return (
             <li className="relative group">
-                <span className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer">
-                    {item.title}
-                    <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-#A202F0 transition-transform duration-200" />
-                </span>
-                {/* Nested Flyout */}
-                <div className="hidden group-hover:block absolute left-full top-0 w-64 bg-white dark:bg-gray-800 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-20">
-                    <ul className="py-1">
-                        {item.subItems.map((sub, index) => <DesktopSubItem key={`${sub.path || sub.title}-${index}`} item={sub} />)}
+                {/* Parent submenu item */}
+
+                <div
+                    className="
+                        flex
+                        items-center
+                        justify-between
+                        px-4
+                        py-3
+                        text-sm
+                        !text-gray-700
+                        hover:!text-black
+                        hover:bg-gray-100
+                        cursor-pointer
+                        transition-all
+                        duration-200
+                    "
+                >
+                    <span>{item.title}</span>
+
+                    <ChevronRight
+                        className="
+                            w-4
+                            h-4
+                            !text-gray-400
+                            group-hover:!text-black
+                            transition-colors
+                            duration-200
+                        "
+                    />
+                </div>
+
+                {/* Nested flyout */}
+
+                <div
+                    className="
+                        hidden
+                        group-hover:block
+                        absolute
+                        left-full
+                        top-0
+                        w-64
+                        bg-white
+                        rounded-md
+                        shadow-xl
+                        ring-1
+                        ring-black/5
+                        z-40
+                        py-2
+                    "
+                >
+                    <ul>
+                        {item.subItems.map((sub, index) => (
+                            <DesktopSubItem
+                                key={`${sub.path || sub.title}-${index}`}
+                                item={sub}
+                            />
+                        ))}
                     </ul>
                 </div>
             </li>
         );
     }
+
+    // ==================================================
+    // DIRECT SUBMENU LINK
+    // ==================================================
+
     return (
         <li>
-            <NavLink 
-                to={item.path} 
-                className={({ isActive }) => `block px-4 py-2 text-sm transition-colors ${
-                    isActive ? 'text-#A202F0 bg-#A202F0 dark:bg-sky-900/20 font-semibold' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-                }`}
+            <NavLink
+                to={item.path}
+                className={({ isActive }) =>
+                    `
+                    block
+                    px-4
+                    py-3
+                    text-sm
+                    transition-all
+                    duration-200
+                    focus:outline-none
+                    focus:ring-0
+                    ${
+                        isActive
+                            ? "!text-black !bg-gray-100 font-semibold"
+                            : "!text-gray-700 hover:!text-black hover:bg-gray-100"
+                    }
+                    `
+                }
             >
                 {item.title}
             </NavLink>
@@ -116,35 +268,105 @@ const DesktopSubItem = ({ item }) => {
     );
 };
 
+// ======================================================
+// DESKTOP DROPDOWN
+// ======================================================
+
 const DesktopDropdown = ({ item }) => {
     const [isOpen, setIsOpen] = useState(false);
+
     const dropdownRef = useRef(null);
-    
-    // Simple hover logic for main desktop dropdown
+
     return (
-        <li className="relative p-1" 
-            ref={dropdownRef} 
+        <li
+            ref={dropdownRef}
+            className="relative"
             onMouseEnter={() => setIsOpen(true)}
             onMouseLeave={() => setIsOpen(false)}
         >
-            <button className="flex items-center font-medium transition-colors hover:text-sky-600 dark:hover:text-[#A202F0] text-gray-700 dark:text-gray-300 py-2">
-                {item.title}
-                <ChevronDown className={`ml-1 h-4 w-4 transform transition-transform duration-200 ${isOpen ? 'rotate-180 text-#A202F0' : ''}`} />
+            {/* ==================================================
+                SERVICE BUTTON
+            ================================================== */}
+
+            <button
+                type="button"
+                className="
+                    flex
+                    items-center
+                    gap-1
+                    font-medium
+                    !text-white
+                    hover:!text-black
+                    focus:outline-none
+                    focus:ring-0
+                    transition-colors
+                    duration-200
+                    py-2
+                "
+            >
+                <span>{item.title}</span>
+
+                <ChevronDown
+                    className={`
+                        h-4
+                        w-4
+                        transition-all
+                        duration-200
+                        ${
+                            isOpen
+                                ? "rotate-180 !text-black"
+                                : "!text-white"
+                        }
+                    `}
+                />
             </button>
-            
+
+            {/* ==================================================
+                SERVICE DROPDOWN
+            ================================================== */}
+
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, y: 15 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 15 }}
-                        transition={{ duration: 0.2 }}
-                        className="absolute left-0 mt-0 w-64 bg-white dark:bg-gray-800 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-30 py-2"
+                        initial={{
+                            opacity: 0,
+                            y: 10,
+                        }}
+                        animate={{
+                            opacity: 1,
+                            y: 0,
+                        }}
+                        exit={{
+                            opacity: 0,
+                            y: 10,
+                        }}
+                        transition={{
+                            duration: 0.2,
+                        }}
+                        className="
+                            absolute
+                            left-0
+                            top-full
+                            mt-2
+                            w-64
+                            bg-white
+                            rounded-md
+                            shadow-xl
+                            ring-1
+                            ring-black/5
+                            z-30
+                            py-2
+                        "
                     >
                         <ul>
-                            {item.subItems.map((subItem, index) => (
-                                <DesktopSubItem key={`${subItem.path || subItem.title}-${index}`} item={subItem} />
-                            ))}
+                            {item.subItems.map(
+                                (subItem, index) => (
+                                    <DesktopSubItem
+                                        key={`${subItem.path || subItem.title}-${index}`}
+                                        item={subItem}
+                                    />
+                                )
+                            )}
                         </ul>
                     </motion.div>
                 )}
@@ -153,63 +375,161 @@ const DesktopDropdown = ({ item }) => {
     );
 };
 
-const DesktopNavItem = ({ item }) => (
-    <li>
-        <NavLink 
-            to={item.path} 
-            className={({ isActive }) => `font-medium transition-colors hover:text-sky-600 dark:hover:text-[#A202F0] ${
-                isActive ? 'text-#A202F0 dark:text-[#A202F0] font-semibold' : 'text-gray-700 dark:text-gray-300'
-            }`}
-        >
-            {item.title}
-        </NavLink>
-    </li>
-);
+// ======================================================
+// DESKTOP NAV ITEM
+// ======================================================
 
+const DesktopNavItem = ({ item }) => {
+    return (
+        <li>
+            <NavLink
+                to={item.path}
+                end={item.path === "/"}
+                className={({ isActive }) =>
+                    `
+                    font-medium
+                    transition-colors
+                    duration-200
+                    focus:outline-none
+                    focus:ring-0
+                    ${
+                        isActive
+                            ? "!text-black font-semibold"
+                            : "!text-white hover:!text-black"
+                    }
+                    `
+                }
+            >
+                {item.title}
+            </NavLink>
+        </li>
+    );
+};
 
-// --- 2. Mobile Specific Components (The Fix) ---
+// ======================================================
+// MOBILE NAV ITEM
+// ======================================================
 
-const MobileNavItem = ({ item, closeMenu, level = 0 }) => {
+const MobileNavItem = ({
+    item,
+    closeMenu,
+    level = 0,
+}) => {
     const [isOpen, setIsOpen] = useState(false);
-    const hasChildren = item.subItems && item.subItems.length > 0;
 
-    // Base styling for links
-    const linkBase = "block py-2 text-base font-medium transition-colors hover:text-sky-600 dark:hover:text-[#A202F0] text-gray-700 dark:text-gray-300 w-full text-left flex justify-between items-center";
-    const activeClass = "text-#A202F0 dark:text-[#A202F0] font-semibold";
-    
-    // Dynamic padding based on nesting level (Service > Organic > SEO)
-    const paddingLeft = level === 0 ? "" : "pl-4";
+    const hasChildren =
+        item.subItems &&
+        item.subItems.length > 0;
 
-    // Scenario 1: It's a Parent Item (Accordion)
+    const linkBase = `
+        block
+        py-3
+        text-base
+        font-medium
+        transition-colors
+        duration-200
+        !text-gray-700
+        hover:!text-black
+        w-full
+        text-left
+        flex
+        justify-between
+        items-center
+        focus:outline-none
+        focus:ring-0
+    `;
+
+    const activeClass =
+        "!text-black font-semibold";
+
+    const paddingLeft =
+        level === 0 ? "" : "pl-4";
+
+    // ==================================================
+    // PARENT ITEM
+    // ==================================================
+
     if (hasChildren) {
         return (
-            <div className={`border-b border-gray-100 dark:border-gray-800 last:border-0 ${paddingLeft}`}>
-                <button 
-                    onClick={() => setIsOpen(!isOpen)} 
+            <div
+                className={`
+                    border-b
+                    border-gray-100
+                    last:border-0
+                    ${paddingLeft}
+                `}
+            >
+                <button
+                    type="button"
+                    onClick={() =>
+                        setIsOpen(!isOpen)
+                    }
                     className={linkBase}
                 >
-                    {item.title}
-                    <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180 text-#A202F0' : 'text-gray-400'}`} />
+                    <span>{item.title}</span>
+
+                    <ChevronDown
+                        className={`
+                            w-5
+                            h-5
+                            transition-transform
+                            duration-300
+                            ${
+                                isOpen
+                                    ? "rotate-180 !text-black"
+                                    : "!text-gray-400"
+                            }
+                        `}
+                    />
                 </button>
-                
+
+                {/* ==================================================
+                    MOBILE CHILDREN
+                ================================================== */}
+
                 <AnimatePresence>
                     {isOpen && (
                         <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: "auto", opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                            initial={{
+                                height: 0,
+                                opacity: 0,
+                            }}
+                            animate={{
+                                height: "auto",
+                                opacity: 1,
+                            }}
+                            exit={{
+                                height: 0,
+                                opacity: 0,
+                            }}
+                            transition={{
+                                duration: 0.3,
+                                ease: "easeInOut",
+                            }}
                             className="overflow-hidden"
                         >
-                            <div className="border-l-2 border-sky-100 dark:border-gray-700 ml-2 mb-2">
-                                {item.subItems.map((sub, idx) => (
-                                    <MobileNavItem 
-                                        key={idx} 
-                                        item={sub} 
-                                        closeMenu={closeMenu} 
-                                        level={level + 1} 
-                                    />
-                                ))}
+                            <div
+                                className="
+                                    border-l-2
+                                    border-gray-200
+                                    ml-2
+                                    mb-2
+                                "
+                            >
+                                {item.subItems.map(
+                                    (sub, idx) => (
+                                        <MobileNavItem
+                                            key={`${sub.path || sub.title}-${idx}`}
+                                            item={sub}
+                                            closeMenu={
+                                                closeMenu
+                                            }
+                                            level={
+                                                level + 1
+                                            }
+                                        />
+                                    )
+                                )}
                             </div>
                         </motion.div>
                     )}
@@ -218,13 +538,32 @@ const MobileNavItem = ({ item, closeMenu, level = 0 }) => {
         );
     }
 
-    // Scenario 2: It's a Direct Link
+    // ==================================================
+    // DIRECT MOBILE LINK
+    // ==================================================
+
     return (
-        <div className={`border-b border-gray-100 dark:border-gray-800 last:border-0 ${paddingLeft}`}>
-            <NavLink 
-                to={item.path} 
+        <div
+            className={`
+                border-b
+                border-gray-100
+                last:border-0
+                ${paddingLeft}
+            `}
+        >
+            <NavLink
+                to={item.path}
                 onClick={closeMenu}
-                className={({ isActive }) => `${linkBase} ${isActive ? activeClass : ''}`}
+                className={({ isActive }) =>
+                    `
+                    ${linkBase}
+                    ${
+                        isActive
+                            ? activeClass
+                            : ""
+                    }
+                    `
+                }
             >
                 {item.title}
             </NavLink>
@@ -232,138 +571,453 @@ const MobileNavItem = ({ item, closeMenu, level = 0 }) => {
     );
 };
 
-
-// --- 3. Main Header ---
+// ======================================================
+// MAIN HEADER
+// ======================================================
 
 const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const { scrollYProgress } = useScroll();
-    const scaleX = useSpring(scrollYProgress, {
-        stiffness: 100,
-        damping: 30,
-        restDelta: 0.001
-    });
+    const [isMenuOpen, setIsMenuOpen] =
+        useState(false);
 
-    // Lock body scroll when mobile menu is open
+    // ==================================================
+    // SCROLL PROGRESS
+    // ==================================================
+
+    const { scrollYProgress } =
+        useScroll();
+
+    const scaleX = useSpring(
+        scrollYProgress,
+        {
+            stiffness: 100,
+            damping: 30,
+            restDelta: 0.001,
+        }
+    );
+
+    // ==================================================
+    // LOCK BODY SCROLL
+    // ==================================================
+
     useEffect(() => {
         if (isMenuOpen) {
-            document.body.style.overflow = 'hidden';
+            document.body.style.overflow =
+                "hidden";
         } else {
-            document.body.style.overflow = 'unset';
+            document.body.style.overflow =
+                "unset";
         }
+
+        return () => {
+            document.body.style.overflow =
+                "unset";
+        };
     }, [isMenuOpen]);
 
-    const closeMobileMenu = () => setIsMenuOpen(false);
+    // ==================================================
+    // CLOSE MOBILE MENU
+    // ==================================================
+
+    const closeMobileMenu = () => {
+        setIsMenuOpen(false);
+    };
+
+    // ==================================================
+    // HEADER
+    // ==================================================
 
     return (
         <>
-<header className="sticky top-0 z-50 bg-black/95 dark:bg-purple-900/95 shadow-lg backdrop-blur-sm border-b border-gray-100 dark:border-gray-800 text-white [&_a]:text-white [&_a:hover]:text-[#A202F0]">
-                {/* Scroll Progress Bar */}
+            <header
+                className="
+                    sticky
+                    top-0
+                    z-50
+                    bg-[#A202F0]/90
+                    shadow-lg
+                    backdrop-blur-sm
+                    border-b
+                    border-white/10
+                "
+            >
+                {/* ==================================================
+                    SCROLL PROGRESS
+                ================================================== */}
+
                 <motion.div
-                    className="absolute bottom-0 left-0 right-0 h-1 bg-#A202F0 origin-left z-50"
-                    style={{ scaleX }}
+                    className="
+                        absolute
+                        bottom-0
+                        left-0
+                        right-0
+                        h-1
+                        bg-white
+                        origin-left
+                        z-50
+                    "
+                    style={{
+                        scaleX,
+                    }}
                 />
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between items-center h-20">
-                        
-                        {/* Logo */}
+
+                {/* ==================================================
+                    CONTAINER
+                ================================================== */}
+
+                <div
+                    className="
+                        container
+                        mx-auto
+                        px-4
+                        sm:px-6
+                        lg:px-8
+                    "
+                >
+                    <div
+                        className="
+                            flex
+                            justify-between
+                            items-center
+                            h-20
+                        "
+                    >
+                        {/* ==================================================
+                            LOGO
+                        ================================================== */}
+
                         <div className="flex items-center">
-                            <Link to="/" className="flex items-center space-x-2">
-                                <img src={Logo} alt="Company Logo" className="h-14 w-auto object-contain" />
+                            <Link
+                                to="/"
+                                className="
+                                    flex
+                                    items-center
+                                    focus:outline-none
+                                "
+                            >
+                                <img
+                                    src={Logo}
+                                    alt="Company Logo"
+                                    className="
+                                        h-14
+                                        w-auto
+                                        object-contain
+                                    "
+                                />
                             </Link>
                         </div>
 
-                        {/* Desktop Nav */}
+                        {/* ==================================================
+                            DESKTOP NAVIGATION
+                        ================================================== */}
+
                         <nav className="hidden lg:flex">
-                            <ul className="flex items-center space-x-6">
-                                {NAV_ITEMS.map((item, index) => (
-                                    item.subItems ? 
-                                    <DesktopDropdown key={`${item.title}-${index}`} item={item} /> : 
-                                    <DesktopNavItem key={`${item.path}-${index}`} item={item} />
-                                ))}
+                            <ul
+                                className="
+                                    flex
+                                    items-center
+                                    space-x-7
+                                "
+                            >
+                                {NAV_ITEMS.map(
+                                    (
+                                        item,
+                                        index
+                                    ) =>
+                                        item.subItems ? (
+                                            <DesktopDropdown
+                                                key={`${item.title}-${index}`}
+                                                item={
+                                                    item
+                                                }
+                                            />
+                                        ) : (
+                                            <DesktopNavItem
+                                                key={`${item.path}-${index}`}
+                                                item={
+                                                    item
+                                                }
+                                            />
+                                        )
+                                )}
                             </ul>
                         </nav>
 
-                        {/* CTA & Mobile Toggle */}
+                        {/* ==================================================
+                            CTA + MOBILE BUTTON
+                        ================================================== */}
+
                         <div className="flex items-center">
-                            <div className="hidden lg:flex items-center ml-4">
-                                <Link to="/contact" className="px-5 py-2 text-sm font-semibold rounded-full text-white bg-#A202F0 hover:bg-sky-600 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105">
+                            {/* Desktop CTA */}
+
+                            <div
+                                className="
+                                    hidden
+                                    lg:flex
+                                    items-center
+                                    ml-4
+                                "
+                            >
+                                <Link
+                                    to="/contact"
+                                    className="
+                                        px-5
+                                        py-2.5
+                                        text-sm
+                                        font-semibold
+                                        rounded-full
+                                        !text-white
+                                        bg-[#A202F0]
+                                        border
+                                        border-white/30
+                                        hover:bg-white
+                                        hover:!text-black
+                                        focus:outline-none
+                                        focus:ring-0
+                                        transition-all
+                                        duration-300
+                                        shadow-lg
+                                        hover:shadow-xl
+                                        transform
+                                        hover:scale-105
+                                    "
+                                >
                                     Get Quote
                                 </Link>
                             </div>
-                            
-                            {/* Mobile Hamburger */}
+
+                            {/* Mobile Menu Button */}
+
                             <div className="lg:hidden ml-4">
                                 <button
-                                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                                    className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus:outline-none"
+                                    type="button"
+                                    onClick={() =>
+                                        setIsMenuOpen(
+                                            !isMenuOpen
+                                        )
+                                    }
+                                    className="
+                                        p-2
+                                        rounded-md
+                                        !text-white
+                                        hover:!text-black
+                                        hover:bg-white/10
+                                        transition-colors
+                                        focus:outline-none
+                                        focus:ring-0
+                                    "
                                 >
-                                    {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                                    {isMenuOpen ? (
+                                        <X className="h-6 w-6" />
+                                    ) : (
+                                        <Menu className="h-6 w-6" />
+                                    )}
                                 </button>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </header>
 
-            {/* Mobile Menu Overlay - FIXED Z-INDEX and Structure */}
+            {/* ======================================================
+                MOBILE MENU
+            ====================================================== */}
+
             <AnimatePresence>
                 {isMenuOpen && (
                     <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.2 }}
-                        // INCREASED z-index to 60 to sit ON TOP of the sticky header (z-50)
-                        className="fixed inset-0 z-[60] lg:hidden"
+                        initial={{
+                            opacity: 0,
+                        }}
+                        animate={{
+                            opacity: 1,
+                        }}
+                        exit={{
+                            opacity: 0,
+                        }}
+                        transition={{
+                            duration: 0.2,
+                        }}
+                        className="
+                            fixed
+                            inset-0
+                            z-[60]
+                            lg:hidden
+                        "
                     >
-                        {/* Backdrop */}
-                        <div 
-                            className="absolute inset-0 bg-black/60 backdrop-blur-sm" 
-                            onClick={closeMobileMenu} 
+                        {/* ==================================================
+                            BACKDROP
+                        ================================================== */}
+
+                        <div
+                            className="
+                                absolute
+                                inset-0
+                                bg-black/60
+                                backdrop-blur-sm
+                            "
+                            onClick={
+                                closeMobileMenu
+                            }
                         />
 
-                        {/* Menu Panel */}
+                        {/* ==================================================
+                            MENU PANEL
+                        ================================================== */}
+
                         <motion.div
-                            initial={{ x: "100%" }}
-                            animate={{ x: 0 }}
-                            exit={{ x: "100%" }}
-                            transition={{ duration: 0.3 }}
-                            className="absolute right-0 top-0 w-[80%] max-w-sm h-full bg-white dark:bg-gray-900 shadow-2xl flex flex-col"
+                            initial={{
+                                x: "100%",
+                            }}
+                            animate={{
+                                x: 0,
+                            }}
+                            exit={{
+                                x: "100%",
+                            }}
+                            transition={{
+                                duration: 0.3,
+                            }}
+                            className="
+                                absolute
+                                right-0
+                                top-0
+                                w-[80%]
+                                max-w-sm
+                                h-full
+                                bg-white
+                                shadow-2xl
+                                flex
+                                flex-col
+                            "
                         >
-                            {/* Mobile Header (Logo + Close) */}
-                            <div className="flex justify-between items-center p-6 border-b border-gray-100 dark:border-gray-800">
-                                <Link to="/" onClick={closeMobileMenu}>
-                                    <img src={Logo} alt="Logo" className="h-10 w-auto" />
-                                </Link>
-                                <button
-                                    onClick={closeMobileMenu}
-                                    className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                            {/* ==================================================
+                                MOBILE HEADER
+                            ================================================== */}
+
+                            <div
+                                className="
+                                    flex
+                                    justify-between
+                                    items-center
+                                    p-6
+                                    border-b
+                                    border-gray-100
+                                "
+                            >
+                                <Link
+                                    to="/"
+                                    onClick={
+                                        closeMobileMenu
+                                    }
+                                    className="focus:outline-none"
                                 >
-                                    <X className="h-6 w-6 text-gray-600 dark:text-gray-300" />
+                                    <img
+                                        src={Logo}
+                                        alt="Logo"
+                                        className="
+                                            h-10
+                                            w-auto
+                                            object-contain
+                                        "
+                                    />
+                                </Link>
+
+                                <button
+                                    type="button"
+                                    onClick={
+                                        closeMobileMenu
+                                    }
+                                    className="
+                                        p-2
+                                        rounded-full
+                                        hover:bg-gray-100
+                                        transition-colors
+                                        focus:outline-none
+                                        focus:ring-0
+                                    "
+                                >
+                                    <X
+                                        className="
+                                            h-6
+                                            w-6
+                                            !text-gray-600
+                                            hover:!text-black
+                                        "
+                                    />
                                 </button>
                             </div>
-                            
-                            {/* Scrollable Content Area */}
-                            <div className="flex-1 overflow-y-auto p-6">
+
+                            {/* ==================================================
+                                MOBILE CONTENT
+                            ================================================== */}
+
+                            <div
+                                className="
+                                    flex-1
+                                    overflow-y-auto
+                                    p-6
+                                "
+                            >
                                 <nav className="space-y-1">
-                                    {NAV_ITEMS.map((item, idx) => (
-                                        <MobileNavItem 
-                                            key={idx} 
-                                            item={item} 
-                                            closeMenu={closeMobileMenu} 
-                                        />
-                                    ))}
+                                    {NAV_ITEMS.map(
+                                        (
+                                            item,
+                                            idx
+                                        ) => (
+                                            <MobileNavItem
+                                                key={`${item.path}-${idx}`}
+                                                item={
+                                                    item
+                                                }
+                                                closeMenu={
+                                                    closeMobileMenu
+                                                }
+                                            />
+                                        )
+                                    )}
                                 </nav>
                             </div>
 
-                            {/* Mobile Footer CTA */}
-                            <div className="p-6 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/50">
-                                <Link 
-                                    to="/contact" 
-                                    className="flex justify-center items-center w-full px-4 py-3 text-base font-semibold rounded-lg text-white bg-primary hover:bg-sky-600 shadow-md transition-all active:scale-95"
-                                    onClick={closeMobileMenu}
+                            {/* ==================================================
+                                MOBILE CTA
+                            ================================================== */}
+
+                            <div
+                                className="
+                                    p-6
+                                    border-t
+                                    border-gray-100
+                                    bg-gray-50
+                                "
+                            >
+                                <Link
+                                    to="/contact"
+                                    onClick={
+                                        closeMobileMenu
+                                    }
+                                    className="
+                                        flex
+                                        justify-center
+                                        items-center
+                                        w-full
+                                        px-4
+                                        py-3
+                                        text-base
+                                        font-semibold
+                                        rounded-lg
+                                        !text-white
+                                        bg-[#A202F0]
+                                        hover:bg-white
+                                        hover:!text-black
+                                        border
+                                        border-[#A202F0]
+                                        shadow-md
+                                        transition-all
+                                        duration-300
+                                        active:scale-95
+                                        focus:outline-none
+                                        focus:ring-0
+                                    "
                                 >
                                     Get Quote
                                 </Link>

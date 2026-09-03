@@ -1,67 +1,65 @@
-// src/components/Home/Service.jsx
 import React from 'react';
+
 import {
+    GraduationCap,
     Laptop,
-    PanelsTopLeft,
-    Megaphone,
-    Briefcase,
-    UserCircle2,
-    RefreshCcw,
-    SearchCheck,
-    FolderKanban
+    Plane,
+    Truck,
+    SolarPanel,
+    Factory
 } from 'lucide-react';
+
 import { motion } from 'framer-motion';
+
+
+// ======================================================
+// SERVICES DATA
+// ======================================================
 
 const services = [
     {
+        icon: GraduationCap,
+        title: 'Education',
+        description:
+            'Explore education and training opportunities designed to build skills, support higher education goals, and create better career opportunities.'
+    },
+
+    {
         icon: Laptop,
-        title: 'Web Design & Development',
+        title: 'Technology',
         description:
-            'We create responsive, fast, and visually stunning websites tailored to strengthen your business presence.'
+            'Our technology services help businesses improve their digital presence, streamline operations, and build reliable technology solutions.'
     },
+
     {
-        icon: PanelsTopLeft,
-        title: 'Custom Web Application Development',
+        icon: Plane,
+        title: 'Immigration',
         description:
-            'From dashboards to enterprise-grade systems, we build secure and scalable custom web applications.'
+            'Get professional guidance for international immigration opportunities with support throughout your visa and immigration journey.'
     },
+
     {
-        icon: Megaphone,
-        title: 'Social Media Marketing',
+        icon: Truck,
+        title: 'Logistics',
         description:
-            'Boost your brand visibility and engagement with strategic and creative social media marketing campaigns.'
+            'Our logistics services support businesses with efficient movement, coordination, and management of goods across domestic and international markets.'
     },
+
     {
-        icon: Briefcase,
-        title: 'Corporate Branding',
+        icon: SolarPanel,
+        title: 'Renewable Energy',
         description:
-            'We design professional brand identities that reflect your company’s values, personality, and mission.'
+            'Explore renewable energy solutions focused on sustainable power generation and efficient energy management.'
     },
+
     {
-        icon: UserCircle2,
-        title: 'Personal Branding',
+        icon: Factory,
+        title: 'Manufacturing',
         description:
-            'We help individuals build a powerful online presence with impactful personal branding strategies.'
-    },
-    {
-        icon: RefreshCcw,
-        title: 'Re Branding',
-        description:
-            'Transform your brand with a fresh and modern identity that aligns with your business goals and audience.'
-    },
-    {
-        icon: SearchCheck,
-        title: 'Professional SEO',
-        description:
-            'Rank higher, get more traffic, and dominate your niche with our data-driven SEO optimization services.'
-    },
-    {
-        icon: FolderKanban,
-        title: 'Others',
-        description:
-            'We also offer premium video production and PR solutions to elevate your brand and maximize reach.'
-    },
+            'Our manufacturing services support businesses with product development, production, quality management, and operational solutions.'
+    }
 ];
+
 
 // Header animation
 const headerVariants = {
@@ -133,9 +131,9 @@ const Service = () => {
                     <div className="h-1 w-16 bg-[#A202F0] mx-auto mt-3 rounded-full"></div>
 
                     <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
-                        At DataIT, we specialize in delivering top-notch web
-                        design and mobile app development services through our
-                        comprehensive service portfolio.
+                          Explore our industry-focused services and
+          discover solutions designed to support business
+          growth and operational excellence.
                     </p>
                 </motion.div>
 

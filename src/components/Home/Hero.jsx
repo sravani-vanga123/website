@@ -1,7 +1,7 @@
 // src/components/Home/Hero.jsx
 import React from 'react';
 import { Lightbulb, Award, BarChart2 } from 'lucide-react'; 
-import HeroImage from '../../assets/Hero1.png'; // Ensure path is correct
+import HeroImage from '../../assets/Hero.png'; 
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'; // Import Motion
 
