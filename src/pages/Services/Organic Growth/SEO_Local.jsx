@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../../../components/SEO/SEO';
 
-const SEO_Local = () => {
+const CareerCounselling = () => {
   return (
     <div className="font-sans text-[#25252B] bg-white min-h-screen">
       <SEO 
@@ -165,4 +165,4 @@ const SEO_Local = () => {
   );
 };
 
-export default SEO_Local;
+export default CareerCounselling;

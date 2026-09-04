@@ -20,24 +20,14 @@ const Missionvision = () => {
                 {/* === Left Column (Mission) === */}
                 <div className="bg-navy-dark pt-48 pb-20 px-8 md:px-16 lg:pr-28 flex flex-col justify-center">
                     <h3 className="text-3xl font-bold text-white mb-8">
-                        Mission
+                       Our Vision
                     </h3>
                     
                     <div className="space-y-6 text-white/90 text-lg leading-relaxed font-normal">
+                        
+                       
                         <p>
-                            Our mission is to empower businesses with intelligent, customized
-                            digital solutions that simplify operations, improve efficiency,
-                            and accelerate sustainable growth.
-                        </p>
-                        <p>
-                            We aim to eliminate the complexity and misconceptions surrounding
-                            digital transformation by delivering clear, reliable, and scalable
-                            automation systems built with modern technology.
-                        </p>
-                        <p>
-                            Data IT specializes in building custom software solutions, web and
-                            mobile applications, and business management systems tailored to
-                            each organization’s unique workflow and goals.
+                           "To become a trusted global ecosystem partner connecting technology, manufacturing, education, and talent to create sustainable growth and international opportunities."
                         </p>
                     </div>
                 </div>
@@ -45,25 +35,14 @@ const Missionvision = () => {
                 {/* === Right Column (Vision) === */}
                 <div className="bg-primary pt-48 pb-20 px-8 md:px-16 lg:pl-28 flex flex-col justify-center text-white">
                     <h3 className="text-3xl font-bold mb-8">
-                        Vision
+                        Mission
                     </h3>
 
                     <div className="space-y-6 text-white/90 text-lg leading-relaxed font-normal">
+                        
+                      
                         <p>
-                            Our vision is to become a globally trusted technology partner,
-                            recognized for delivering future-ready software solutions that
-                            evolve alongside our clients’ businesses.
-                        </p>
-                        <p>
-                            Founded in 2024, Data IT is built on innovation, transparency, and
-                            a strong commitment to quality. We strive to set new standards in
-                            custom software development by focusing on real business impact
-                            rather than generic solutions.
-                        </p>
-                        <p>
-                            We envision a future where businesses operate smarter through
-                            AI-driven insights, automation, and data-powered decision-making,
-                            all supported by reliable and scalable digital systems.
+                            "To connect global partners, businesses, institutions, and talent through innovative IT solutions, manufacturing partnerships, education pathways, and workforce solutions that accelerate growth and create lasting value."
                         </p>
                     </div>
                 </div>
