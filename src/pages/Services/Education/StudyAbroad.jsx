@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../../../components/SEO/SEO';
 
-const SEO_TravelAgents = () => {
+const StudyAbroad = () => {
   return (
     <div className="font-sans text-[#25252B] bg-white min-h-screen">
       <SEO 
-        title="Travel Agency SEO Services - Data IT"
-        description="Rank destinations, package pages, and attract online bookings. Data IT offers professional SEO for travel agents and tour operators."
-        keywords="Travel Agency SEO, Tour Operator SEO, Destination SEO, Booking Conversion Optimization, Tour Package Marketing"
-        url="/seo-travel"
+        title="E-commerce SEO Services - Data IT"
+        description="Drive search rankings, organic traffic, and product sales. Data IT offers expert e-commerce SEO optimization, technical auditing, and product page schemas."
+        keywords="E-commerce SEO, Shopify SEO, WooCommerce SEO, Product Schema, Category Page Optimization, Online Sales"
+        url="/StudyAbroad"
         siteName="Data IT"
         type="website"
       />
@@ -21,7 +21,7 @@ const SEO_TravelAgents = () => {
           <li>/</li>
           <li className="hover:text-[#056FFD] cursor-default">Services</li>
           <li>/</li>
-          <li className="font-semibold opacity-100">Travel Agency SEO</li>
+          <li className="font-semibold opacity-100">StudyAbroad</li>
         </ul>
       </div>
 
@@ -30,21 +30,21 @@ const SEO_TravelAgents = () => {
         <div className="flex flex-col md:flex-row items-center gap-14">
           <div className="w-full md:w-1/2 space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold text-[#1A356A] leading-tight">
-              SEO Services for <br /> Travel Agencies
+              E-commerce SEO <br /> Services
             </h1>
             <p className="text-lg leading-relaxed">
-              Data IT provides specialized SEO services for travel agencies, tour
-              operators, and travel service providers to increase online visibility,
-              booking inquiries, and international reach.
+              Data IT provides data-driven e-commerce SEO services designed to increase
+              product visibility, attract high-intent buyers, and drive sustainable
+              online sales growth.
             </p>
             <p className="leading-relaxed">
-              The travel industry is highly competitive and seasonal. Ranking requires
-              destination-based SEO, service-focused content, and local plus global
-              search optimization.
+              Ranking an e-commerce website is more complex than traditional SEO.
+              It requires technical optimization, structured data, category-level
+              strategy, and continuous performance tracking.
             </p>
             <p className="leading-relaxed">
-              Our travel agency SEO strategies help you attract high-intent travelers,
-              generate booking leads, and grow your brand authority online.
+              Our e-commerce SEO solutions are built to improve search rankings,
+              product discovery, conversion rate, and long-term revenue.
             </p>
           </div>
 
@@ -52,7 +52,7 @@ const SEO_TravelAgents = () => {
 
 
     <img
-      src="https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Service/SEO_TravelAgents-min.jpeg"
+      src="https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Service/SEO_Ecommerce-min.png"
       alt="WebDesign And Development"
       className="w-3/4 h-3/4 object-contain"
       loading="lazy"
@@ -67,19 +67,19 @@ const SEO_TravelAgents = () => {
       <section className="bg-[#EFF0F6] py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#1A356A] mb-10">
-            Our Travel Agency SEO Services
+            Our E-commerce SEO Services
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              "Travel website SEO audit & strategy",
-              "Destination-based keyword research",
-              "Tour & package page optimization",
-              "Local SEO for travel agencies",
-              "International SEO & geo-targeting",
-              "Technical SEO & site performance",
-              "Content strategy for travel blogs",
-              "Lead & booking conversion optimization"
+              "E-commerce SEO audit & strategy",
+              "Product & category keyword research",
+              "On-page product optimization",
+              "Technical SEO for e-commerce platforms",
+              "Site speed & Core Web Vitals optimization",
+              "Structured data & schema implementation",
+              "Content optimization for product pages",
+              "Conversion-focused SEO improvements"
             ].map((service, index) => (
               <div
                 key={index}
@@ -96,17 +96,17 @@ const SEO_TravelAgents = () => {
       <section className="bg-white py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#1A356A] mb-12">
-            Our Travel SEO Process
+            Our E-commerce SEO Process
           </h2>
 
           <ul className="space-y-6 max-w-3xl">
             {[
-              "Market & competitor analysis in travel niche",
-              "Keyword targeting for destinations & services",
-              "Technical SEO & website optimization",
-              "Travel-focused content & page optimization",
-              "Authority building & backlink strategy",
-              "Performance tracking & booking growth optimization"
+              "E-commerce site audit & competitor analysis",
+              "Keyword mapping for products & categories",
+              "Technical fixes & performance optimization",
+              "Product content & metadata optimization",
+              "Authority building & internal linking",
+              "Tracking, reporting & continuous optimization"
             ].map((step, i) => (
               <li key={i} className="flex items-start gap-4">
                 <span className="w-3 h-3 mt-2 rounded-full bg-[#056FFD]"></span>
@@ -121,17 +121,17 @@ const SEO_TravelAgents = () => {
       <section className="bg-[#CAE9FF] py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#1A356A] mb-10 text-center">
-            Why Choose Data IT for Travel Agency SEO
+            Why Choose Data IT for E-commerce SEO
           </h2>
 
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              "Travel industry SEO expertise",
-              "Focus on bookings & inquiries",
-              "Local and international SEO strategies",
-              "Seasonal & destination-based optimization",
-              "Transparent reporting & growth tracking",
-              "Long-term SEO partnership"
+              "SEO strategies built specifically for online stores",
+              "Focus on revenue, not just traffic",
+              "Deep understanding of e-commerce platforms",
+              "Technical & content SEO expertise",
+              "Transparent reporting & KPI tracking",
+              "Long-term SEO growth partnership"
             ].map((reason, idx) => (
               <div key={idx} className="bg-white p-6 rounded-lg shadow-sm">
                 <p className="font-medium">{reason}</p>
@@ -146,17 +146,17 @@ const SEO_TravelAgents = () => {
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
           <div>
             <h3 className="text-3xl font-bold">
-              Want More Travel Bookings Online?
+              Want More Sales from Organic Search?
             </h3>
             <p className="text-[#B1DAF8] mt-2">
-              Let Data IT grow your travel business with proven SEO strategies.
+              Let Data IT grow your e-commerce revenue with proven SEO strategies.
             </p>
           </div>
           <Link
             to="/contact"
             className="bg-[#056FFD] hover:bg-[#330FEE] transition-all px-10 h-14 rounded-lg font-semibold text-lg shadow-lg inline-flex items-center justify-center"
           >
-            Start Travel SEO
+            Start E-commerce SEO
           </Link>
         </div>
       </section>
@@ -165,4 +165,4 @@ const SEO_TravelAgents = () => {
   );
 };
 
-export default SEO_TravelAgents;
+export default StudyAbroad;

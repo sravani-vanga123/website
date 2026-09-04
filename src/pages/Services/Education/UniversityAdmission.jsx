@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../../../components/SEO/SEO';
 
-const CareerCounselling = () => {
+const UniversityAdmission = () => {
   return (
     <div className="font-sans text-[#25252B] bg-white min-h-screen">
       <SEO 
-        title="Local SEO Services & GBP Optimization - Data IT"
-        description="Dominate local searches. Data IT optimizes Google Business Profiles (GBP), manages local citations, and helps local businesses show up on Google Maps."
-        keywords="Local SEO, Google Business Profile, GBP Optimization, Local Search Rankings, Maps Optimization, Citations"
-        url="/seo-local"
+        title="Professional SEO Services - Data IT"
+        description="Drive search rankings, organic traffic, and revenue growth. Data IT offers professional SEO strategies, content auditing, and link building."
+        keywords="Professional SEO Services, Enterprise SEO, Technical SEO Audit, Search Engine Optimization, Link Building"
+        url="/UniversityAdmission"
         siteName="Data IT"
         type="website"
       />
@@ -21,7 +21,7 @@ const CareerCounselling = () => {
           <li>/</li>
           <li className="hover:text-[#056FFD] cursor-default">Services</li>
           <li>/</li>
-          <li className="font-semibold opacity-100">Local SEO</li>
+          <li className="font-semibold opacity-100">UniversityAdmission</li>
         </ul>
       </div>
 
@@ -30,21 +30,21 @@ const CareerCounselling = () => {
         <div className="flex flex-col md:flex-row items-center gap-14">
           <div className="w-full md:w-1/2 space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold text-[#1A356A] leading-tight">
-              Local SEO <br /> Services
+              Professional SEO <br /> Services
             </h1>
             <p className="text-lg leading-relaxed">
-              Data IT helps local businesses dominate search results in their target
-              locations by increasing visibility on Google Search, Google Maps, and
-              local discovery platforms.
+              Data IT delivers professional SEO services focused on long-term search
+              visibility, qualified traffic, and measurable business growth across
+              competitive markets.
             </p>
             <p className="leading-relaxed">
-              Local SEO ensures your business appears when potential customers search
-              for products or services near them. It is one of the most effective ways
-              to generate high-intent leads.
+              Our professional SEO approach combines technical optimization, strategic
+              content, and authority building to ensure sustainable ranking
+              improvements—not short-term tactics.
             </p>
             <p className="leading-relaxed">
-              Our local SEO strategies are designed to bring real customers to your
-              business—online and offline.
+              Whether you are a startup or an established enterprise, our SEO strategies
+              are tailored to your industry, audience, and growth objectives.
             </p>
           </div>
 
@@ -52,7 +52,7 @@ const CareerCounselling = () => {
 
 
     <img
-      src="https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Service/SEO_Local-min.png"
+      src="https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Service/SEO_Professional-min.jpeg"
       alt="WebDesign And Development"
       className="w-3/4 h-3/4 object-contain"
       loading="lazy"
@@ -63,23 +63,23 @@ const CareerCounselling = () => {
         </div>
       </section>
 
-      {/* Local SEO Services */}
+      {/* SEO Services */}
       <section className="bg-[#EFF0F6] py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#1A356A] mb-10">
-            Our Local SEO Services
+            Our Professional SEO Services
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              "Local SEO audit & strategy",
-              "Google Business Profile optimization",
-              "Local keyword research & targeting",
-              "NAP consistency & citation management",
-              "On-page local SEO optimization",
-              "Local content & landing pages",
-              "Review generation & reputation management",
-              "Local performance tracking & reporting"
+              "Comprehensive SEO audit & strategy",
+              "Advanced keyword research & mapping",
+              "Technical SEO & site architecture optimization",
+              "On-page SEO & content optimization",
+              "Authority building & ethical link acquisition",
+              "Core Web Vitals & performance optimization",
+              "Conversion-focused SEO improvements",
+              "SEO reporting & performance tracking"
             ].map((service, index) => (
               <div
                 key={index}
@@ -92,21 +92,21 @@ const CareerCounselling = () => {
         </div>
       </section>
 
-      {/* Local SEO Process */}
+      {/* SEO Process */}
       <section className="bg-white py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#1A356A] mb-12">
-            Our Local SEO Process
+            Our Professional SEO Process
           </h2>
 
           <ul className="space-y-6 max-w-3xl">
             {[
-              "Local market & competitor analysis",
-              "Google Business Profile setup & optimization",
-              "Location-based keyword mapping",
-              "Website & local landing page optimization",
-              "Citation building & review strategy",
-              "Monitoring, reporting & continuous optimization"
+              "SEO audit & competitor benchmarking",
+              "Keyword intent analysis & strategy",
+              "Technical fixes & structural optimization",
+              "Content enhancement & optimization",
+              "Authority building & trust signals",
+              "Monitoring, reporting & continuous growth"
             ].map((step, i) => (
               <li key={i} className="flex items-start gap-4">
                 <span className="w-3 h-3 mt-2 rounded-full bg-[#056FFD]"></span>
@@ -121,17 +121,17 @@ const CareerCounselling = () => {
       <section className="bg-[#CAE9FF] py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#1A356A] mb-10 text-center">
-            Why Choose Data IT for Local SEO
+            Why Choose Data IT for Professional SEO
           </h2>
 
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              "Proven local SEO strategies",
-              "Focus on calls, visits & real leads",
-              "Deep understanding of local search behavior",
-              "Transparent reporting & KPIs",
-              "Ethical, white-hat SEO practices",
-              "Long-term local growth support"
+              "Long-term, sustainable SEO strategies",
+              "Focus on qualified traffic & ROI",
+              "White-hat, Google-compliant practices",
+              "Experienced SEO specialists",
+              "Transparent KPIs & monthly reporting",
+              "Dedicated growth-oriented partnership"
             ].map((reason, idx) => (
               <div key={idx} className="bg-white p-6 rounded-lg shadow-sm">
                 <p className="font-medium">{reason}</p>
@@ -146,17 +146,17 @@ const CareerCounselling = () => {
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
           <div>
             <h3 className="text-3xl font-bold">
-              Want More Local Customers?
+              Ready to Grow with Professional SEO?
             </h3>
             <p className="text-[#B1DAF8] mt-2">
-              Let Data IT put your business on top of local search results.
+              Let Data IT help you achieve consistent rankings and sustainable growth.
             </p>
           </div>
           <Link
             to="/contact"
             className="bg-[#056FFD] hover:bg-[#330FEE] transition-all px-10 h-14 rounded-lg font-semibold text-lg shadow-lg inline-flex items-center justify-center"
           >
-            Start Local SEO
+            Start Professional SEO
           </Link>
         </div>
       </section>
@@ -165,4 +165,4 @@ const CareerCounselling = () => {
   );
 };
 
-export default CareerCounselling;
+export default UniversityAdmission;

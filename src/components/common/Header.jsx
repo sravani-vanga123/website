@@ -17,143 +17,195 @@ import Logo from "../../assets/image.png";
 // ======================================================
 // NAVIGATION DATA
 // ======================================================
+// ======================================================
+// NAVIGATION DATA
+// ======================================================
 
 const NAV_ITEMS = [
     {
         title: "Home",
         path: "/",
     },
+
     {
         title: "About",
         path: "/about",
     },
+
+    // ======================================================
+    // SERVICES
+    // ======================================================
     {
         title: "Service",
         path: "#",
+
         subItems: [
+
+            // ==================================================
+            // EDUCATION
+            // ==================================================
             {
                 title: "Education",
                 path: "#",
+
                 subItems: [
                     {
                         title: "Career Counselling",
-                        path: "/seo-travel",
+                        path: "/services/education/career-counselling",
                     },
+
                     {
                         title: "Internship",
-                        path: "/seo-garments",
+                        path: "/services/education/internship",
                     },
+
                     {
                         title: "Study Abroad",
-                        path: "/seo-ecommerce",
+                        path: "/services/education/study-abroad",
                     },
+
                     {
                         title: "Training",
-                        path: "/seo-professional",
+                        path: "/services/education/training",
                     },
+
                     {
                         title: "University Admissions",
-                        path: "/seo-local",
+                        path: "/services/education/university-admission",
                     },
                 ],
             },
+
+            // ==================================================
+            // TECHNOLOGY
+            // ==================================================
             {
                 title: "Technology",
-                path: "/smm",
+                path: "#",
+
                 subItems: [
                     {
                         title: "Cloud Solutions",
-                        path: "/social-media-marketing",
-                    },
-                     {
-                        title: "Cyber Security",
-                        path: "/social-media-marketing",
-                    },
-                    {
-                        title: "Digital Marketing",
-                        path: "/social-media-marketing",
-                    },
-                    {
-                        title: "UI/Ux Design",
-                        path: "/social-media-marketing",
-                    },
-                  {
-                        title: "Web Development",
-                        path: "/social-media-marketing",
+                        path: "/services/technology/cloud-solutions",
                     },
 
+                    {
+                        title: "Cyber Security",
+                        path: "/services/technology/cyber-security",
+                    },
+
+                    {
+                        title: "Digital Marketing",
+                        path: "/services/technology/digital-marketing",
+                    },
+
+                    {
+                        title: "UI/UX Design",
+                        path: "/services/technology/ui-ux-design",
+                    },
+
+                    {
+                        title: "Web Development",
+                        path: "/services/technology/web-development",
+                    },
                 ],
             },
+
+            // ==================================================
+            // IMMIGRATION
+            // ==================================================
             {
                 title: "Immigration",
                 path: "#",
+
                 subItems: [
                     {
                         title: "Australia",
-                        path: "/web-dev",
+                        path: "/services/immigration/australia",
                     },
+
                     {
                         title: "Canada",
-                        path: "/ecommerce-website",
+                        path: "/services/immigration/canada",
                     },
+
                     {
-                        title: "LatviaTrp",
-                        path: "/website-maintenance",
+                        title: "Latvia TRP",
+                        path: "/services/immigration/latvia-trp",
                     },
-                    
                 ],
             },
+
+            // ==================================================
+            // LOGISTICS
+            // ==================================================
             {
                 title: "Logistics",
                 path: "#",
+
                 subItems: [
                     {
                         title: "Freight Forwarding",
-                        path: "/corporate-branding",
+                        path: "/services/logistics/freight-forwarding",
                     },
+
                     {
                         title: "Imports & Exports",
-                        path: "/personal-branding",
+                        path: "/services/logistics/imports-exports",
                     },
-                   
                 ],
             },
+
+            // ==================================================
+            // RENEWABLE ENERGY
+            // ==================================================
             {
                 title: "Renewable Energy",
                 path: "#",
+
                 subItems: [
                     {
                         title: "Solar",
-                        path: "/rms",
+                        path: "/services/renewable-energy/solar",
                     },
-                    
                 ],
             },
+
+            // ==================================================
+            // MANUFACTURING
+            // ==================================================
             {
                 title: "Manufacturing",
                 path: "#",
+
                 subItems: [
                     {
                         title: "Cosmetics",
-                        path: "/ui-ux",
+                        path: "/services/manufacturing/cosmetics",
                     },
+
                     {
                         title: "Electronics",
-                        path: "/graphic-design",
+                        path: "/services/manufacturing/electronics",
                     },
                 ],
             },
-            ,
         ],
     },
+
+    // ======================================================
+    // OTHER NAV ITEMS
+    // ======================================================
     {
         title: "Portfolios",
         path: "/portfolios",
     },
+
     {
         title: "Blog",
         path: "/blog",
     },
+
     {
         title: "Contact",
         path: "/contact",

@@ -39,11 +39,25 @@ const GraphicDesign = lazy(() => import('./pages/Services/Design/GraphicDesign')
 const UiUxDesign = lazy(() => import('./pages/Services/Design/UI_UX_Design'))
 
 // 🔹 Services → Organic Growth (SEO)
-const SeoEcommerce = lazy(() => import('./pages/Services/Organic Growth/SEO_Ecommerce'))
-const SeoGarments = lazy(() => import('./pages/Services/Organic Growth/SEO_Garments'))
-const SeoLocal = lazy(() => import('./pages/Services/Organic Growth/SEO_Local'))
-const SeoProfessional = lazy(() => import('./pages/Services/Organic Growth/SEO_Professional'))
-const SeoTravelAgents = lazy(() => import('./pages/Services/Organic Growth/SEO_TravelAgents'))
+const CareerCounselling = lazy(() =>
+  import("./pages/Services/Education/CareerCounselling")
+);
+
+const StudyAbroad = lazy(() =>
+  import("./pages/Services/Education/StudyAbroad")
+);
+
+const Internship = lazy(() =>
+  import("./pages/Services/Education/Internship")
+);
+
+const Training = lazy(() =>
+  import("./pages/Services/Education/Training")
+);
+
+const UniversityAdmission = lazy(() =>
+  import("./pages/Services/Education/UniversityAdmission")
+);
 
 // 🔹 Services → Others
 const PrAgency = lazy(() => import('./pages/Services/Others/PRAgency'))
@@ -117,12 +131,35 @@ const router = createBrowserRouter([
       { path: 'custom-web-app', element: <CustomWebApplicationDevelopment /> },
 
       // 🔹 Services → SEO
-      { path: 'seo-ecommerce', element: <SeoEcommerce /> },
-      { path: 'seo-garments', element: <SeoGarments /> },
-      { path: 'seo-local', element: <SeoLocal /> },
-      { path: 'seo-professional', element: <SeoProfessional /> },
-      { path: 'seo-travel', element: <SeoTravelAgents /> },
-      { path: 'team', element: <Team /> },
+     // 🔹 Services → Education
+{
+  path: 'services/education/career-counselling',
+  element: <CareerCounselling />
+},
+{
+  path: 'services/education/internship',
+  element: <Internship />
+},
+{
+  path: 'services/education/study-abroad',
+  element: <StudyAbroad />
+},
+{
+  path: 'services/education/training',
+  element: <Training />
+},
+{
+  path: 'services/education/university-admission',
+  element: <UniversityAdmission />
+},
+
+// 🔹 Services → Team
+{
+  path: 'services/team',
+  element: <Team />
+},
+
+
 
       // 🔹 Services → SMM
       { path: 'social-media-marketing', element: <SocialMediaMarketing /> },

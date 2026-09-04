@@ -24,31 +24,50 @@ const ProcessCard = ({ title, description }) => (
 // --- Main Component: ProcessSection ---
 function ProcessSection() {
   const processSteps = [
-    {
-      title: 'Explore',
-      description: "In the beginning, we dive deep into your project. We use smart strategies and careful analysis to uncover the best ways to help your idea blossom into a successful solution.",
-    },
-    {
-      title: 'Plan',
-      description: "Every concept needs a solid foundation. We use top tools and methods to outline a roadmap for a thriving solution.",
-    },
-    {
-      title: 'Design',
-      description: "Our experienced designers take the stage. They thoroughly analyze your concept and create a user-friendly design strategy. This ensures your end-users will love the result.",
-    },
-    {
-      title: 'Develop',
-      description: "The world of web and app development is vast and always changing. We stay updated on the latest trends and incorporate them into the development process.",
-    },
-    {
-      title: 'Launch',
-      description: "We use our expertise and follow app store guidelines to successfully launch your apps.",
-    },
-    {
-      title: 'Delivery',
-      description: "We're committed to meeting strict deadlines. Our teams ensure on-time delivery without ever sacrificing quality.",
-    },
-  ];
+ 
+  {
+    number: "01",
+    title: "Discover",
+    subtitle: "Understand Your Goals",
+    description:
+      "We begin by understanding your aspirations, challenges, requirements, and long-term objectives.",
+  },
+  {
+    number: "02",
+    title: "Analyse",
+    subtitle: "Identify the Right Opportunities",
+    description:
+      "We assess your needs, strengths, market landscape, and available opportunities to develop the right direction.",
+  },
+  {
+    number: "03",
+    title: "Strategise",
+    subtitle: "Build a Clear Roadmap",
+    description:
+      "Our experts develop a focused strategy aligned with your goals, industry requirements, and future opportunities.",
+  },
+  {
+    number: "04",
+    title: "Connect",
+    subtitle: "Access the Right Network",
+    description:
+      "Through our global and industry-oriented partnerships, we connect you with relevant universities, businesses, technology providers, industry partners, and talent networks.",
+  },
+  {
+    number: "05",
+    title: "Execute",
+    subtitle: "Turn Strategy into Action",
+    description:
+      "We provide end-to-end support to implement the selected solution, pathway, or opportunity with professionalism and precision.",
+  },
+  {
+    number: "06",
+    title: "Grow",
+    subtitle: "Create Long-Term Value",
+    description:
+      "Our relationship continues beyond implementation. We focus on sustainable growth, continuous improvement, and long-term success.",
+  },
+];
 
   return (
     // bg-gray-50 mapped to bg-gray-light
