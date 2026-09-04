@@ -1,4 +1,3 @@
-// ProcessSection.js
 import React from 'react';
 import { CheckCircle } from 'lucide-react'; // Using lucide-react for the checkmark icon
 
@@ -84,6 +83,10 @@ function ProcessSection() {
           <p className="mt-4 text-xl text-gray-dark">
             Six Steps to Achieving Your Vision
           </p>
+        <p className="mt-4 text-lg text-gray-dark">
+            
+          At Moin Consultancy, we transform aspirations and business requirements into clear, actionable pathways. Our structured approach combines expert guidance, industry insights, global partnerships, and personalised solutions to create meaningful outcomes.
+</p>
         </div>
 
         {/* The 2x3 Grid of Process Steps */}
