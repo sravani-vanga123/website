@@ -67,7 +67,7 @@ const HomeTeam = () => {
                     variants={headerVariants}
                 >
                     <h2 className="text-3xl font-bold text-gray-900 uppercase tracking-wide">
-                        Meet the People Behind Data IT
+                        Meet the People Behind Moin consultancy
                     </h2>
                     <motion.div 
                         initial={{ width: 0 }}

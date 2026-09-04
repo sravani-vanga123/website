@@ -1,77 +1,167 @@
 import React from "react";
-import moinImage from "../../assets/moin.png"; // adjust path if needed
+import moinImage from "../../assets/moin.png";
 
 const AboutConsultancy = () => {
   return (
-    <section className="w-full py-16 px-4 bg-white">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-gray-900 uppercase tracking-wide">
+    <section className="w-full bg-white py-16 md:py-20 px-5 md:px-10 overflow-hidden">
+
+      {/* =========================
+          SECTION HEADING
+      ========================= */}
+      <div className="text-center mb-14">
+
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 uppercase tracking-wide">
           About Moin Consultancy
         </h2>
 
         <div className="h-1 w-16 mt-4 bg-primary mx-auto rounded-full"></div>
+
       </div>
 
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
 
-        {/* LEFT COLUMN: Image & Shape */}
-        <div className="w-full md:w-1/2 flex flex-col items-center justify-center relative mt-10 md:mt-0">
+      {/* =========================
+          MAIN SECTION
+      ========================= */}
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
-          {/* Image Container */}
-          <div className="relative z-10">
-            <img
-              src={moinImage}
-              alt="Moin Consultancy"
-              className="w-96 h-96 md:w-72 md:h-72 object-cover rounded-full shadow-lg"
-            />
+
+        {/* =====================================================
+            LEFT SIDE - EXACT CIRCLE + BLUE U SHAPE
+        ===================================================== */}
+        <div className="w-full lg:w-1/2 flex justify-center">
+
+          <div className="relative w-[520px] h-[500px] flex justify-center items-start">
+
+
+            {/* ==========================================
+                BLUE U / SEMI-CIRCLE
+            ========================================== */}
+            <div
+              className="
+                absolute
+                top-[180px]
+                left-1/2
+                -translate-x-1/2
+
+                w-[500px]
+                h-[285px]
+
+                bg-primary
+
+                rounded-b-full
+
+                z-0
+              "
+            ></div>
+
+
+            {/* ==========================================
+                WHITE INNER BORDER
+            ========================================== */}
+            <div
+              className="
+                absolute
+                top-[175px]
+                left-1/2
+                -translate-x-1/2
+
+                w-[420px]
+                h-[245px]
+
+                border-b-[5px]
+                border-white
+
+                rounded-b-full
+
+                z-[1]
+              "
+            ></div>
+
+
+            {/* ==========================================
+                IMAGE CIRCLE
+            ========================================== */}
+            <div
+              className="
+                relative
+                z-10
+
+                w-[420px]
+                h-[420px]
+
+                rounded-full
+                overflow-hidden
+
+                border-4
+                border-white
+
+                shadow-[0_5px_20px_rgba(0,0,0,0.12)]
+
+                bg-white
+              "
+            >
+
+              <img
+                src={moinImage}
+                alt="Moin Consultancy"
+                className="
+                  w-full
+                  h-full
+                  object-cover
+                "
+              />
+
+            </div>
+
           </div>
-        
 
-          {/* The Blue Semi-Circle Shape */}
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[10%] w-[120%] max-w-[400px] h-48 bg-primary rounded-b-full -z-0"></div>
         </div>
 
-        {/* --- RIGHT COLUMN: Content --- */}
-        <div className="w-full md:w-1/2 text-left">
-        
-          <h2 className="text-5xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-           Connecting Global Expertise with New Possibilities
+
+        {/* =====================================================
+            RIGHT SIDE - CONTENT
+        ===================================================== */}
+        <div className="w-full lg:w-1/2">
+
+         
+
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-7">
+            Connecting Global Expertise with New Possibilities
           </h2>
-      
-          <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-          Moin Consultancy is a global consulting and solutions company dedicated to connecting people, businesses, institutions, and industries with the right expertise, opportunities, technology, and talent.
+
+          <div className="w-16 h-1 bg-primary rounded-full mb-7"></div>
 
 
+          <p className="text-gray-600 text-lg leading-8 mb-6">
+            Moin Consultancy is a global consulting and solutions company
+            dedicated to connecting people, businesses, institutions, and
+            industries with the right expertise, opportunities, technology,
+            and talent.
           </p>
- <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-          We believe that meaningful growth begins with the right connection. Through our growing network of global industry partners, technology providers, educational institutions, manufacturers, and professional networks, we create opportunities that enable individuals and organizations to move forward with confidence.
-  </p>
-  <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-    Our approach combines industry knowledge, technology, education, talent, and strategic partnerships to deliver solutions that are relevant to today's rapidly evolving global economy.
-  </p>
 
-       
+
+          <p className="text-gray-600 text-lg leading-8 mb-6">
+            We believe that meaningful growth begins with the right
+            connection. Through our growing network of global industry
+            partners, technology providers, educational institutions,
+            manufacturers, and professional networks, we create opportunities
+            that enable individuals and organizations to move forward with
+            confidence.
+          </p>
+
+
+          <p className="text-gray-600 text-lg leading-8">
+            Our approach combines industry knowledge, technology, education,
+            talent, and strategic partnerships to deliver solutions that are
+            relevant to today's rapidly evolving global economy.
+          </p>
+
         </div>
 
       </div>
+
     </section>
   );
 };
-
-// Helper component for the checkmark list items
-const ListItem = ({ text }) => (
-  <li className="flex items-start gap-3">
-    <svg 
-      className="w-6 h-6 text-primary flex-shrink-0 mt-1" 
-      fill="none" 
-      stroke="currentColor" 
-      viewBox="0 0 24 24" 
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-    </svg>
-    <span className="text-gray-700 text-base">{text}</span>
-  </li>
-);
 
 export default AboutConsultancy;

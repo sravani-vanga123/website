@@ -8,8 +8,7 @@ import OurStory from "../components/About/Approach";
 
 import AboutConsultancy from "../components/About/AboutConsultancy";
 import Ourcore from "../components/About/Ourcore";
-
-// import OurTeam from "../components/About/OurTeam";
+import OurTeam from "../components/About/OurTeam";
 // import Benefits from "../components/About/Benefits";
 // import Businesschanger from "../components/About/Businesschanger";
 
@@ -39,8 +38,8 @@ const AboutUs = () => {
       {/* Why Moin Consultancy */}
       <WhyMoin />
 
-      {/* Our Team */}
-      {/* <OurTeam /> */}
+    
+       <OurTeam />
 
       {/* Benefits */}
       {/* <Benefits /> */}

@@ -5,6 +5,7 @@ import {
   Handshake,
   Lightbulb,
   ShieldCheck,
+  Users
 } from "lucide-react";
 
 import {
@@ -33,12 +34,7 @@ const WhyMoin = () => {
         "Understanding evolving industry requirements and creating solutions around real-world needs."
     },
 
-    {
-      icon: FaUsers,
-      title: "Recruitment & Talent",
-      description:
-        "We bridge organizations with skilled professionals through recruitment, talent acquisition, workforce solutions, career development, and industry-aligned training.",
-    },
+   
 
     {
       icon: Handshake,
@@ -60,6 +56,12 @@ const WhyMoin = () => {
       description:
         "Building every relationship on transparency, professionalism, accountability, and mutual success.",
     },
+     {
+  icon: Users,
+  title: "People & Talent",
+  description:
+    "Empowering individuals and organizations through education, skills, career opportunities, and professional development.",
+},
   ];
 
   return (

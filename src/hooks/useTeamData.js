@@ -1,11 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-import teamData from '../assets/Team.json';
+// Import team member images
+import member1 from "../assets/moin.png";
+import member2 from "../assets/Hr4.png";
+import member3 from "../assets/hr5.png";
 
-/**
- * Custom hook to load and manage team data.
- * @returns {Object} The loaded team members, loading state, and error.
- */
 const useTeamData = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -13,17 +12,35 @@ const useTeamData = () => {
 
   useEffect(() => {
     try {
-      // 1. Check Data Integrity
-      if (!Array.isArray(teamData)) {
-        throw new Error('Team data is not an array.');
-      }
+      const teamData = [
+        {
+          serial: 1,
+          name: "Moin",
+          position: "Director",
+          photoUrl: member1,
+        },
+        
+       {
+          serial: 2,
+          name: "S Aafreen",
+          position: "HR Manager",
+          photoUrl: member2,
+        },
+         {
+          serial: 3,
+          name: "SK Naim",
+          position: "Marketing Head",
+          photoUrl: member3,
+        },
+
+        
+      ];
 
       setData(teamData);
     } catch (err) {
-      console.error('Failed to load team data:', err);
+      console.error("Failed to load team data:", err);
       setError(err.message);
     } finally {
-      // 2. Loading complete
       setLoading(false);
     }
   }, []);

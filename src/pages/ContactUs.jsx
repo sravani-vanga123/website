@@ -115,7 +115,7 @@ const ContactUs = () => {
                 <div className="lg:col-span-1 bg-white p-8 shadow-xl rounded-lg border border-gray-100 h-fit">
                     <div className="mb-8 border-b pb-4">
                         <h2 className="text-xl font-bold text-gray-800 flex items-center mb-2">
-                            <HiOutlineMapPin className="text-[#A202F0] mr-2" /> BD OFFICE
+                            <HiOutlineMapPin className="text-[#A202F0] mr-2" /> REGISTERED OFFICE
                         </h2>
                         <p className="text-gray-600 ml-6">
                            9-7-054, Near Sri Sai Junior College,
@@ -127,7 +127,18 @@ Yanam-533464
                         </p>
                     </div>
 
-                   
+                    <div className="mb-8 border-b pb-4">
+                        <h2 className="text-xl font-bold text-gray-800 flex items-center mb-2">
+                            <HiOutlineMapPin className="text-[#A202F0] mr-2" /> HEAD OFFICE
+                        </h2>
+                        
+                        <p className="text-gray-600 ml-6">
+                           Vijayawada
+        </p>
+         <p className="text-gray-600 mt-2 ml-6 flex items-center">
+                            <FaPhoneAlt className="text-sm mr-2 text-[#A202F0]" /> +919390605958
+                        </p>
+                        </div>
 
                     <div className="mb-8 border-b pb-4">
     <h2 className="text-xl font-bold text-gray-800 mb-2">
