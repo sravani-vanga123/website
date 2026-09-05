@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../../../components/SEO/SEO';
 
-const CustomWebApplicationDevelopment = () => {
+const EcommerceWebsite = () => {
   return (
     <div className="font-sans text-[#25252B] bg-white min-h-screen">
       <SEO 
-        title="Custom Web Application Development - Data IT"
-        description="Build secure, scalable React/Node.js web applications custom tailored to your business operations, database structures, and workflow automation."
-        keywords="Custom Web App Development, SaaS Development, Enterprise Portal, React Developers Dhaka, Custom ERP Systems"
-        url="/custom-web-app"
+        title="E-commerce Website Development - Data IT"
+        description="Launch a high-conversion online store. Data IT builds secure e-commerce systems with payment gateways, inventory management, and fast shopping carts."
+        keywords="E-commerce Website Development, Shopify Store Builder, WooCommerce Developer, Online Shopping Cart, Payment Gateway Bangladesh"
+        url="/ecommerce-website"
         siteName="Data IT"
         type="website"
       />
@@ -21,7 +21,7 @@ const CustomWebApplicationDevelopment = () => {
           <li>/</li>
           <li className="hover:text-[#056FFD] cursor-default">Services</li>
           <li>/</li>
-          <li className="font-semibold opacity-100">Custom Web Application Development</li>
+          <li className="font-semibold opacity-100">Australia Immigration</li>
         </ul>
       </div>
 
@@ -30,22 +30,22 @@ const CustomWebApplicationDevelopment = () => {
         <div className="flex flex-col md:flex-row items-center gap-14">
           <div className="w-full md:w-1/2 space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold text-[#1A356A] leading-tight">
-              Custom Web Application Development
+              E-commerce Website <br /> Development Services
             </h1>
             <p className="text-lg leading-relaxed">
-              Data IT delivers secure, scalable, and fully customized web applications
-              designed to match your business workflow, operational needs, and long-term
-              growth strategy.
+              Data IT builds high-performance, conversion-focused e-commerce websites
+              that help businesses sell more, manage operations efficiently, and scale
+              confidently in competitive digital markets.
             </p>
             <p className="leading-relaxed">
-              We do not build generic systems. Every web application we develop is crafted
-              from scratch—focused on performance, usability, and measurable business
-              outcomes.
+              From product management and secure checkout to inventory, order tracking,
+              and analytics—our e-commerce solutions are designed to deliver seamless
+              customer experiences and complete business control.
             </p>
             <p className="leading-relaxed">
-              Whether you are a startup, SME, or enterprise, our custom web applications
-              help you automate processes, centralize data, and gain real-time control
-              over your business operations.
+              Whether you are launching a new online store or upgrading an existing
+              platform, we deliver fully customized e-commerce systems tailored to your
+              brand, audience, and growth strategy.
             </p>
           </div>
 
@@ -53,7 +53,7 @@ const CustomWebApplicationDevelopment = () => {
 
 
     <img
-      src="https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Service/CustomWebApplicationDevelopment-min.png"
+      src="https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Service/EcommerceWebsite-min.png"
       alt="WebDesign And Development"
       className="w-3/4 h-3/4 object-contain"
       loading="lazy"
@@ -64,27 +64,29 @@ const CustomWebApplicationDevelopment = () => {
         </div>
       </section>
 
-      {/* What We Build */}
+      {/* Features Section */}
       <section className="bg-[#EFF0F6] py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#1A356A] mb-10">
-            What We Build for Your Business
+            Powerful Features for Online Growth
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              "Custom business management systems",
-              "Admin dashboards & control panels",
-              "CRM & customer management platforms",
-              "Inventory, billing & reporting systems",
-              "Multi-branch & role-based applications",
-              "API-driven & cloud-ready web platforms"
-            ].map((item, index) => (
+              "Custom product & category management",
+              "Secure payment gateway integration",
+              "Order, shipping & customer tracking",
+              "Inventory & stock management",
+              "Discounts, coupons & promotions",
+              "SEO-optimized product pages",
+              "Mobile-responsive shopping experience",
+              "Admin dashboard with sales analytics"
+            ].map((feature, index) => (
               <div
                 key={index}
                 className="bg-white p-6 rounded-lg shadow-sm border hover:border-[#056FFD] transition-all"
               >
-                <p className="font-medium text-lg">{item}</p>
+                <p className="font-medium text-lg">{feature}</p>
               </div>
             ))}
           </div>
@@ -95,17 +97,17 @@ const CustomWebApplicationDevelopment = () => {
       <section className="bg-white py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#1A356A] mb-12">
-            Our Development Process
+            Our E-commerce Development Process
           </h2>
 
           <ul className="space-y-6 max-w-3xl">
             {[
-              "Business requirement analysis & system planning",
-              "UX/UI wireframing and workflow design",
-              "Custom development using modern frameworks",
-              "Secure database & API integration",
-              "Testing, optimization, and performance tuning",
-              "Deployment, training, and ongoing support"
+              "Business & product strategy planning",
+              "UX/UI design focused on conversion",
+              "Custom e-commerce development",
+              "Payment, shipping & API integrations",
+              "Testing for performance & security",
+              "Launch, training & ongoing support"
             ].map((step, i) => (
               <li key={i} className="flex items-start gap-4">
                 <span className="w-3 h-3 mt-2 rounded-full bg-[#056FFD]"></span>
@@ -120,17 +122,17 @@ const CustomWebApplicationDevelopment = () => {
       <section className="bg-[#CAE9FF] py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#1A356A] mb-10 text-center">
-            Why Choose Data IT
+            Why Choose Data IT for E-commerce?
           </h2>
 
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              "100% custom-built applications — no templates",
-              "Business-first, technology-driven approach",
-              "Secure, scalable, and future-ready systems",
-              "Clear communication & transparent delivery",
-              "Long-term support and system optimization",
-              "Experience across multiple industries"
+              "100% custom e-commerce solutions",
+              "Conversion-focused UI & UX design",
+              "Secure and scalable architecture",
+              "SEO-friendly structure from day one",
+              "Easy-to-manage admin panel",
+              "Long-term technical support & growth"
             ].map((reason, idx) => (
               <div key={idx} className="bg-white p-6 rounded-lg shadow-sm">
                 <p className="font-medium">{reason}</p>
@@ -145,16 +147,16 @@ const CustomWebApplicationDevelopment = () => {
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
           <div>
             <h3 className="text-3xl font-bold">
-              Ready to Build Your Custom Web Application?
+              Ready to Launch Your Online Store?
             </h3>
             <p className="text-[#B1DAF8] mt-2">
-              Let’s create a system that works exactly the way your business needs.
+              Let’s build an e-commerce platform that sells, scales, and succeeds.
             </p>
           </div>
           <Link
                       to="/contact">
           <button className="bg-[#056FFD] hover:bg-[#330FEE] transition-all px-10 h-14 rounded-lg font-semibold text-lg shadow-lg">
-            Request a Free Consultation
+            Get a Free Consultation
           </button>
           </Link>
         </div>
@@ -164,4 +166,4 @@ const CustomWebApplicationDevelopment = () => {
   );
 };
 
-export default CustomWebApplicationDevelopment;
+export default EcommerceWebsite;

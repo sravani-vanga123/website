@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../../../components/SEO/SEO';
 
-const UI_UX_Design = () => {
+const Electronics = () => {
   return (
     <div className="font-sans text-[#25252B] bg-white min-h-screen">
       <SEO 
-        title="UI/UX Design Services - Data IT"
-        description="Design intuitive and user-centered interfaces. Data IT creates responsive, modern web and mobile designs using standard systems."
-        keywords="UI UX Design, User Experience, User Interface Design, Figma Prototypes, Mobile App Design"
-        url="/ui-ux"
+        title="Graphic Design Services - Data IT"
+        description="Enhance your brand identity with custom graphic design. Data IT offers professional social media graphics, corporate presentations, and print assets."
+        keywords="Graphic Design Services, Brand Identity Design, Marketing Banners, Pitch Decks, Corporate Presentation, Print Assets"
+        url="/graphic-design"
         siteName="Data IT"
         type="website"
       />
@@ -21,7 +21,7 @@ const UI_UX_Design = () => {
           <li>/</li>
           <li className="hover:text-[#056FFD] cursor-default">Services</li>
           <li>/</li>
-          <li className="font-semibold opacity-100">UI/UX Design</li>
+          <li className="font-semibold opacity-100">Electronics</li>
         </ul>
       </div>
 
@@ -30,21 +30,21 @@ const UI_UX_Design = () => {
         <div className="flex flex-col md:flex-row items-center gap-14">
           <div className="w-full md:w-1/2 space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold text-[#1A356A] leading-tight">
-              UI / UX Design <br /> Services
+              Graphic Design <br /> Services
             </h1>
             <p className="text-lg leading-relaxed">
-              Data IT designs intuitive, user-centered, and conversion-focused UI/UX
-              experiences that help businesses engage users, improve usability, and
-              maximize product performance.
+              Data IT delivers professional graphic design solutions that help
+              businesses communicate clearly, build brand recognition, and create
+              strong visual impact across digital and print platforms.
             </p>
             <p className="leading-relaxed">
-              Great design is not just about appearance—it is about how users interact
-              with your product. Our UI/UX solutions focus on clarity, simplicity, and
-              seamless user journeys.
+              From marketing creatives to corporate materials, our designs are
+              strategy-driven, visually consistent, and aligned with your brand
+              identity and business objectives.
             </p>
             <p className="leading-relaxed">
-              From web platforms to mobile applications, we design interfaces that
-              align business goals with user needs.
+              We focus on clarity, creativity, and usability—ensuring every design
+              asset supports engagement, trust, and conversion.
             </p>
           </div>
 
@@ -52,7 +52,7 @@ const UI_UX_Design = () => {
 
 
     <img
-      src="https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Service/UI_UX_Design-min.png"
+      src="https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Service/GraphicDesign-min.png"
       alt="WebDesign And Development"
       className="w-3/4 h-3/4 object-contain"
       loading="lazy"
@@ -63,23 +63,23 @@ const UI_UX_Design = () => {
         </div>
       </section>
 
-      {/* UI/UX Services */}
+      {/* Design Services */}
       <section className="bg-[#EFF0F6] py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#1A356A] mb-10">
-            Our UI / UX Design Services
+            Our Graphic Design Services
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              "User research & persona development",
-              "Information architecture & user flows",
-              "Wireframing & interactive prototyping",
-              "UI design systems & visual guidelines",
-              "Mobile & web interface design",
-              "Usability testing & design validation",
-              "Design handoff for development",
-              "UX optimization & product improvement"
+              "Brand identity & visual assets",
+              "Social media graphics & ad creatives",
+              "Marketing banners & promotional materials",
+              "Corporate presentations & pitch decks",
+              "Brochures, flyers & print designs",
+              "Website & landing page graphics",
+              "Infographics & visual storytelling",
+              "UI assets & design systems"
             ].map((service, index) => (
               <div
                 key={index}
@@ -96,17 +96,17 @@ const UI_UX_Design = () => {
       <section className="bg-white py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#1A356A] mb-12">
-            Our UI / UX Design Process
+            Our Design Process
           </h2>
 
           <ul className="space-y-6 max-w-3xl">
             {[
-              "Product discovery & user research",
-              "User journey mapping & UX strategy",
-              "Wireframes & clickable prototypes",
-              "Visual UI design & brand alignment",
-              "User testing & feedback iteration",
-              "Design delivery & ongoing UX support"
+              "Understanding brand goals & requirements",
+              "Creative research & concept development",
+              "Design execution with brand consistency",
+              "Review, feedback & refinement",
+              "Final delivery in required formats",
+              "Ongoing design support if needed"
             ].map((step, i) => (
               <li key={i} className="flex items-start gap-4">
                 <span className="w-3 h-3 mt-2 rounded-full bg-[#056FFD]"></span>
@@ -121,17 +121,17 @@ const UI_UX_Design = () => {
       <section className="bg-[#CAE9FF] py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#1A356A] mb-10 text-center">
-            Why Choose Data IT for UI / UX Design
+            Why Choose Data IT for Graphic Design
           </h2>
 
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              "User-first, business-driven design approach",
-              "Experienced UI/UX designers",
-              "Designs optimized for conversion & usability",
-              "Scalable design systems for growth",
-              "Seamless collaboration with developers",
-              "Continuous UX improvement support"
+              "Brand-focused and strategy-driven design",
+              "Experienced creative designers",
+              "Consistency across all brand materials",
+              "Fast turnaround with quality control",
+              "Designs optimized for digital & print",
+              "Long-term creative support"
             ].map((reason, idx) => (
               <div key={idx} className="bg-white p-6 rounded-lg shadow-sm">
                 <p className="font-medium">{reason}</p>
@@ -146,17 +146,17 @@ const UI_UX_Design = () => {
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
           <div>
             <h3 className="text-3xl font-bold">
-              Ready to Design Better User Experiences?
+              Need Professional Graphic Design?
             </h3>
             <p className="text-[#B1DAF8] mt-2">
-              Let Data IT design interfaces your users will love.
+              Let Data IT create visuals that elevate your brand and communication.
             </p>
           </div>
           <Link
             to="/contact"
             className="bg-[#056FFD] hover:bg-[#330FEE] transition-all px-10 h-14 rounded-lg font-semibold text-lg shadow-lg inline-flex items-center justify-center"
           >
-            Start UI / UX Design
+            Get Design Support
           </Link>
         </div>
       </section>
@@ -165,4 +165,4 @@ const UI_UX_Design = () => {
   );
 };
 
-export default UI_UX_Design;
+export default Electronics;

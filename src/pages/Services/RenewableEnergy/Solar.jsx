@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../../../components/SEO/SEO';
 
-const RestaurantManagementSystem = () => {
+const Solar = () => {
   return (
     <div className="font-sans text-[#25252B] bg-white min-h-screen">
       <SEO 
@@ -19,9 +19,9 @@ const RestaurantManagementSystem = () => {
         <ul className="flex flex-wrap gap-2 text-[#1A356A] opacity-70">
           <li><Link to="/" className="hover:text-[#056FFD]">Home</Link></li>
           <li>/</li>
-          <li className="hover:text-[#056FFD] cursor-default">Software</li>
+          <li className="hover:text-[#056FFD] cursor-default">Services</li>
           <li>/</li>
-          <li className="font-semibold opacity-100">Restaurant Management System</li>
+          <li className="font-semibold opacity-100">Solar</li>
         </ul>
       </div>
 
@@ -213,4 +213,4 @@ const RestaurantManagementSystem = () => {
   );
 };
 
-export default RestaurantManagementSystem;
+export default Solar;

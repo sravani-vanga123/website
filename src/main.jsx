@@ -29,14 +29,17 @@ const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
 const CookiePolicy = lazy(() => import('./pages/CookiePolicy'))
 const RefundPolicy = lazy(() => import('./pages/RefundPolicy'))
 
-// 🔹 Services → Branding
-const CorporateBranding = lazy(() => import('./pages/Services/Branding/CorporateBranding'))
-const PersonalBranding = lazy(() => import('./pages/Services/Branding/PersonalBranding'))
-const ReBranding = lazy(() => import('./pages/Services/Branding/ReBranding'))
 
-// 🔹 Services → Design
-const GraphicDesign = lazy(() => import('./pages/Services/Design/GraphicDesign'))
-const UiUxDesign = lazy(() => import('./pages/Services/Design/UI_UX_Design'))
+
+
+// 🔹 Services → Manufacturing
+const Cosmetics = lazy(() =>
+  import('./pages/Services/Manufacturing/Cosmetics')
+);
+
+const Electronics = lazy(() =>
+  import('./pages/Services/Manufacturing/Electronics')
+);
 
 // 🔹 Services → Organic Growth (SEO)
 const CareerCounselling = lazy(() =>
@@ -59,23 +62,60 @@ const UniversityAdmission = lazy(() =>
   import("./pages/Services/Education/UniversityAdmission")
 );
 
-// 🔹 Services → Others
-const PrAgency = lazy(() => import('./pages/Services/Others/PRAgency'))
-const VideoProduction = lazy(() => import('./pages/Services/Others/VideoProduction'))
 
-// 🔹 Services → SMM
-const SocialMediaMarketing = lazy(() => import('./pages/Services/SMM/SocialMediaMarketing'))
 
-// 🔹 Services → Software
-const GymManagementSystem = lazy(() => import('./pages/Services/Software/GymManagementSystem'))
-const RestaurantManagementSystem = lazy(() => import('./pages/Services/Software/RestaurantManagementSystem'))
-const RiceMillManagementSystem = lazy(() => import('./pages/Services/Software/RiceMillManagementSystem'))
+// services -techonology
+const CloudSolution = lazy(() =>
+  import('./pages/Services/Technology/CloudSolution')
+);
 
-// 🔹 Services → Website & Content
-const WebDesignAndDevelopment = lazy(() => import('./pages/Services/Website and Content/WebDesignAndDevelopment'))
-const EcommerceWebsite = lazy(() => import('./pages/Services/Website and Content/EcommerceWebsite'))
-const WebsiteMaintenance = lazy(() => import('./pages/Services/Website and Content/WebsiteMaintenance'))
-const CustomWebApplicationDevelopment = lazy(() => import('./pages/Services/Website and Content/CustomWebApplicationDevelopment'))
+const CyberSecurity = lazy(() =>
+  import('./pages/Services/Technology/CyberSecurity')
+);
+
+const DigitalMarketing = lazy(() =>
+  import('./pages/Services/Technology/DigitalMarketing')
+);
+
+const UxDesign = lazy(() =>
+  import('./pages/Services/Technology/UxDesign')
+);
+
+const WebDevelopment = lazy(() =>
+  import('./pages/Services/Technology/WebDevelopment')
+);
+
+// 🔹 Services → Renewable Energy
+const Solar = lazy(() =>
+  import('./pages/Services/RenewableEnergy/Solar')
+);
+
+
+
+
+
+
+// 🔹 Services → Immigration
+const AustraliaImmi = lazy(() =>
+  import('./pages/Services/Immigration/AustraliaImmi')
+);
+
+const CanadaImmi = lazy(() =>
+  import('./pages/Services/Immigration/CanadaImmi')
+);
+
+const Latvia = lazy(() =>
+  import('./pages/Services/Immigration/Latvia')
+);
+// 🔹 Services → Logistics
+const Exports = lazy(() =>
+  import('./pages/Services/Logistics/Exports')
+);
+
+const FreightForward = lazy(() =>
+  import('./pages/Services/Logistics/FreightForward')
+);
+
 
 // Slider CSS
 import "slick-carousel/slick/slick.css"
@@ -106,32 +146,55 @@ const router = createBrowserRouter([
       { path: 'cookie-policy', element: <CookiePolicy /> },
       { path: 'refund-policy', element: <RefundPolicy /> },
 
-      // 🔹 Services → Others
-      { path: 'pr-agency', element: <PrAgency /> },
-      { path: 'video-production', element: <VideoProduction /> },
+  
 
-      // 🔹 Services → Design
-      { path: 'graphic-design', element: <GraphicDesign /> },
-      { path: 'ui-ux', element: <UiUxDesign /> },
+    
 
-      // 🔹 Services → Branding
-      { path: 'corporate-branding', element: <CorporateBranding /> },
-      { path: 'personal-branding', element: <PersonalBranding /> },
-      { path: 're-branding', element: <ReBranding /> },
+    
+    
 
-      // 🔹 Services → Software
-      { path: 'rms', element: <RestaurantManagementSystem /> },
-      { path: 'gms', element: <GymManagementSystem /> },
-      { path: 'ricemms', element: <RiceMillManagementSystem /> },
+   
 
-      // 🔹 Services → Website & Content
-      { path: 'web-dev', element: <WebDesignAndDevelopment /> },
-      { path: 'ecommerce-website', element: <EcommerceWebsite /> },
-      { path: 'website-maintenance', element: <WebsiteMaintenance /> },
-      { path: 'custom-web-app', element: <CustomWebApplicationDevelopment /> },
 
-      // 🔹 Services → SEO
-     // 🔹 Services → Education
+
+
+     
+      
+{
+  path: 'services/technology/cloud-solutions',
+  element: <CloudSolution />
+},
+{
+  path: 'services/technology/cyber-security',
+  element: <CyberSecurity />
+},
+{
+  path: 'services/technology/digital-marketing',
+  element: <DigitalMarketing />
+},
+{
+  path: 'services/technology/ui-ux-design',
+  element: <UxDesign />
+},
+{
+  path: 'services/technology/web-development',
+  element: <WebDevelopment />
+},
+
+
+
+
+{
+  path: 'services/logistics/freight-forwarding',
+  element: <FreightForward />
+},
+{
+  path: 'services/logistics/imports-exports',
+  element: <Exports />
+},
+
+
+   
 {
   path: 'services/education/career-counselling',
   element: <CareerCounselling />
@@ -153,16 +216,40 @@ const router = createBrowserRouter([
   element: <UniversityAdmission />
 },
 
-// 🔹 Services → Team
+
 {
   path: 'services/team',
   element: <Team />
 },
 
+{
+  path: 'services/renewable-energy/solar',
+  element: <Solar />
+},
+{
+  path: 'services/manufacturing/cosmetics',
+  element: <Cosmetics />
+},
+{
+  path: 'services/manufacturing/electronics',
+  element: <Electronics />
+},
+
+{
+  path: 'services/immigration/australia',
+  element: <AustraliaImmi />
+},
+{
+  path: 'services/immigration/canada',
+  element: <CanadaImmi />
+},
+{
+  path: 'services/immigration/latvia-trp',
+  element: <Latvia />
+},
 
 
-      // 🔹 Services → SMM
-      { path: 'social-media-marketing', element: <SocialMediaMarketing /> },
+      
     ]
   }
 ])

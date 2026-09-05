@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../../../components/SEO/SEO';
 
-const GraphicDesign = () => {
+const WebDesignAndDevelopment = () => {
   return (
     <div className="font-sans text-[#25252B] bg-white min-h-screen">
       <SEO 
-        title="Graphic Design Services - Data IT"
-        description="Enhance your brand identity with custom graphic design. Data IT offers professional social media graphics, corporate presentations, and print assets."
-        keywords="Graphic Design Services, Brand Identity Design, Marketing Banners, Pitch Decks, Corporate Presentation, Print Assets"
-        url="/graphic-design"
+        title="Web Design & Development Services - Data IT"
+        description="Build fast-loading, mobile-friendly websites with clean custom code. Data IT provides professional React, WordPress, and corporate web development."
+        keywords="Web Design Bangladesh, Web Development Company Dhaka, Responsive Web Layouts, React Developers, CMS Website"
+        url="/web-dev"
         siteName="Data IT"
         type="website"
       />
@@ -21,7 +21,7 @@ const GraphicDesign = () => {
           <li>/</li>
           <li className="hover:text-[#056FFD] cursor-default">Services</li>
           <li>/</li>
-          <li className="font-semibold opacity-100">Graphic Design</li>
+          <li className="font-semibold opacity-100">Latvia TRP</li>
         </ul>
       </div>
 
@@ -30,21 +30,22 @@ const GraphicDesign = () => {
         <div className="flex flex-col md:flex-row items-center gap-14">
           <div className="w-full md:w-1/2 space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold text-[#1A356A] leading-tight">
-              Graphic Design <br /> Services
+              Web Design & Development <br /> Services
             </h1>
             <p className="text-lg leading-relaxed">
-              Data IT delivers professional graphic design solutions that help
-              businesses communicate clearly, build brand recognition, and create
-              strong visual impact across digital and print platforms.
+              Data IT designs and develops modern, responsive, and high-performing
+              websites that strengthen your brand presence, engage users, and convert
+              visitors into customers.
             </p>
             <p className="leading-relaxed">
-              From marketing creatives to corporate materials, our designs are
-              strategy-driven, visually consistent, and aligned with your brand
-              identity and business objectives.
+              We combine clean UI/UX design with robust development to ensure your
+              website not only looks professional but also delivers speed, security,
+              and seamless performance across all devices.
             </p>
             <p className="leading-relaxed">
-              We focus on clarity, creativity, and usability—ensuring every design
-              asset supports engagement, trust, and conversion.
+              Whether you need a corporate website, service platform, or a scalable
+              web application, our solutions are fully customized to match your
+              business goals and target audience.
             </p>
           </div>
 
@@ -52,7 +53,7 @@ const GraphicDesign = () => {
 
 
     <img
-      src="https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Service/GraphicDesign-min.png"
+      src="https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Service/WebDesignAndDevelopment-min.png"
       alt="WebDesign And Development"
       className="w-3/4 h-3/4 object-contain"
       loading="lazy"
@@ -63,50 +64,48 @@ const GraphicDesign = () => {
         </div>
       </section>
 
-      {/* Design Services */}
+      {/* What We Deliver */}
       <section className="bg-[#EFF0F6] py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#1A356A] mb-10">
-            Our Graphic Design Services
+            What We Deliver
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              "Brand identity & visual assets",
-              "Social media graphics & ad creatives",
-              "Marketing banners & promotional materials",
-              "Corporate presentations & pitch decks",
-              "Brochures, flyers & print designs",
-              "Website & landing page graphics",
-              "Infographics & visual storytelling",
-              "UI assets & design systems"
-            ].map((service, index) => (
+              "Custom website design aligned with your brand",
+              "Mobile-first and fully responsive layouts",
+              "Fast-loading, SEO-friendly architecture",
+              "Secure and scalable frontend & backend",
+              "CMS and admin panel integration",
+              "Performance optimization & analytics setup"
+            ].map((item, index) => (
               <div
                 key={index}
                 className="bg-white p-6 rounded-lg shadow-sm border hover:border-[#056FFD] transition-all"
               >
-                <p className="font-medium text-lg">{service}</p>
+                <p className="font-medium text-lg">{item}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Design Process */}
+      {/* Design & Development Process */}
       <section className="bg-white py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#1A356A] mb-12">
-            Our Design Process
+            Our Design & Development Process
           </h2>
 
           <ul className="space-y-6 max-w-3xl">
             {[
-              "Understanding brand goals & requirements",
-              "Creative research & concept development",
-              "Design execution with brand consistency",
-              "Review, feedback & refinement",
-              "Final delivery in required formats",
-              "Ongoing design support if needed"
+              "Requirement analysis & business understanding",
+              "UI/UX wireframing and visual design",
+              "Frontend & backend development",
+              "Content integration & SEO setup",
+              "Cross-browser & device testing",
+              "Deployment, training & ongoing support"
             ].map((step, i) => (
               <li key={i} className="flex items-start gap-4">
                 <span className="w-3 h-3 mt-2 rounded-full bg-[#056FFD]"></span>
@@ -121,17 +120,17 @@ const GraphicDesign = () => {
       <section className="bg-[#CAE9FF] py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#1A356A] mb-10 text-center">
-            Why Choose Data IT for Graphic Design
+            Why Choose Data IT
           </h2>
 
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              "Brand-focused and strategy-driven design",
-              "Experienced creative designers",
-              "Consistency across all brand materials",
-              "Fast turnaround with quality control",
-              "Designs optimized for digital & print",
-              "Long-term creative support"
+              "Custom-designed websites — no templates",
+              "Modern UI/UX with business focus",
+              "SEO-optimized structure from day one",
+              "Secure, scalable, and maintainable code",
+              "Clear communication & timely delivery",
+              "Long-term maintenance & support"
             ].map((reason, idx) => (
               <div key={idx} className="bg-white p-6 rounded-lg shadow-sm">
                 <p className="font-medium">{reason}</p>
@@ -146,17 +145,17 @@ const GraphicDesign = () => {
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
           <div>
             <h3 className="text-3xl font-bold">
-              Need Professional Graphic Design?
+              Ready to Build a High-Impact Website?
             </h3>
             <p className="text-[#B1DAF8] mt-2">
-              Let Data IT create visuals that elevate your brand and communication.
+              Let’s design and develop a website that represents your business perfectly.
             </p>
           </div>
-          <Link
-            to="/contact"
-            className="bg-[#056FFD] hover:bg-[#330FEE] transition-all px-10 h-14 rounded-lg font-semibold text-lg shadow-lg inline-flex items-center justify-center"
-          >
-            Get Design Support
+           <Link
+            to="/contact">
+          <button className="bg-[#056FFD] hover:bg-[#330FEE] transition-all px-10 h-14 rounded-lg font-semibold text-lg shadow-lg">
+            Request a Free Consultation
+          </button>
           </Link>
         </div>
       </section>
@@ -165,4 +164,4 @@ const GraphicDesign = () => {
   );
 };
 
-export default GraphicDesign;
+export default WebDesignAndDevelopment;

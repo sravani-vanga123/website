@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../../../components/SEO/SEO';
 
-const SocialMediaMarketing = () => {
+const CyberSecurity = () => {
   return (
     <div className="font-sans text-[#25252B] bg-white min-h-screen">
       <SEO 
@@ -19,9 +19,9 @@ const SocialMediaMarketing = () => {
         <ul className="flex flex-wrap gap-2 text-[#1A356A] opacity-70">
           <li><Link to="/" className="hover:text-[#056FFD]">Home</Link></li>
           <li>/</li>
-          <li className="hover:text-[#056FFD] cursor-default">Digital Marketing</li>
+          <li className="hover:text-[#056FFD] cursor-default">Services</li>
           <li>/</li>
-          <li className="font-semibold opacity-100">Social Media Marketing</li>
+          <li className="font-semibold opacity-100">Cyber Security</li>
         </ul>
       </div>
 
@@ -188,4 +188,4 @@ const SocialMediaMarketing = () => {
   );
 };
 
-export default SocialMediaMarketing;
+export default CyberSecurity;

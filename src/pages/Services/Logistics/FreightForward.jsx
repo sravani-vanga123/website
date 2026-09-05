@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../../../components/SEO/SEO';
 
-const ReBranding = () => {
+const FreightForward = () => {
   return (
     <div className="font-sans text-[#25252B] bg-white min-h-screen">
       <SEO 
@@ -21,7 +21,7 @@ const ReBranding = () => {
           <li>/</li>
           <li className="hover:text-[#056FFD] cursor-default">Services</li>
           <li>/</li>
-          <li className="font-semibold opacity-100">Rebranding</li>
+          <li className="font-semibold opacity-100">Freight Forwarding</li>
         </ul>
       </div>
 
@@ -166,4 +166,4 @@ const ReBranding = () => {
   );
 };
 
-export default ReBranding;
+export default FreightForward;

@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../../../components/SEO/SEO';
 
-const WebDesignAndDevelopment = () => {
+const Exports = () => {
   return (
     <div className="font-sans text-[#25252B] bg-white min-h-screen">
       <SEO 
-        title="Web Design & Development Services - Data IT"
-        description="Build fast-loading, mobile-friendly websites with clean custom code. Data IT provides professional React, WordPress, and corporate web development."
-        keywords="Web Design Bangladesh, Web Development Company Dhaka, Responsive Web Layouts, React Developers, CMS Website"
-        url="/web-dev"
+        title="Personal Branding Services - Data IT"
+        description="Establish authority and build long-term value. Data IT helps executives, founders, and professionals build strong personal brands with expert strategies."
+        keywords="Personal Branding, Executive Branding, Founder Identity, Professional Profile Optimization, Storytelling"
+        url="/personal-branding"
         siteName="Data IT"
         type="website"
       />
@@ -21,7 +21,7 @@ const WebDesignAndDevelopment = () => {
           <li>/</li>
           <li className="hover:text-[#056FFD] cursor-default">Services</li>
           <li>/</li>
-          <li className="font-semibold opacity-100">Web Design & Development</li>
+          <li className="font-semibold opacity-100">Imports&Exports</li>
         </ul>
       </div>
 
@@ -30,22 +30,22 @@ const WebDesignAndDevelopment = () => {
         <div className="flex flex-col md:flex-row items-center gap-14">
           <div className="w-full md:w-1/2 space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold text-[#1A356A] leading-tight">
-              Web Design & Development <br /> Services
+              Personal Branding <br /> Services
             </h1>
             <p className="text-lg leading-relaxed">
-              Data IT designs and develops modern, responsive, and high-performing
-              websites that strengthen your brand presence, engage users, and convert
-              visitors into customers.
+              Data IT helps professionals, founders, executives, and creators build
+              strong personal brands that communicate authority, credibility, and
+              long-term value in the digital space.
             </p>
             <p className="leading-relaxed">
-              We combine clean UI/UX design with robust development to ensure your
-              website not only looks professional but also delivers speed, security,
-              and seamless performance across all devices.
+              Personal branding is how people perceive you before they ever meet you.
+              We shape your digital presence to reflect your expertise, values, and
+              professional identity across platforms.
             </p>
             <p className="leading-relaxed">
-              Whether you need a corporate website, service platform, or a scalable
-              web application, our solutions are fully customized to match your
-              business goals and target audience.
+              From positioning and messaging to content and visibility, our personal
+              branding solutions are designed to help you stand out with clarity and
+              confidence.
             </p>
           </div>
 
@@ -53,7 +53,7 @@ const WebDesignAndDevelopment = () => {
 
 
     <img
-      src="https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Service/WebDesignAndDevelopment-min.png"
+      src="https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Service/PersonalBranding-min.png"
       alt="WebDesign And Development"
       className="w-3/4 h-3/4 object-contain"
       loading="lazy"
@@ -64,48 +64,50 @@ const WebDesignAndDevelopment = () => {
         </div>
       </section>
 
-      {/* What We Deliver */}
+      {/* Personal Branding Services */}
       <section className="bg-[#EFF0F6] py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#1A356A] mb-10">
-            What We Deliver
+            What We Offer in Personal Branding
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              "Custom website design aligned with your brand",
-              "Mobile-first and fully responsive layouts",
-              "Fast-loading, SEO-friendly architecture",
-              "Secure and scalable frontend & backend",
-              "CMS and admin panel integration",
-              "Performance optimization & analytics setup"
-            ].map((item, index) => (
+              "Personal brand strategy & positioning",
+              "Professional profile optimization",
+              "Content strategy & storytelling",
+              "Social media presence & growth",
+              "Personal website & portfolio design",
+              "Visual identity for personal brands",
+              "Thought leadership & authority building",
+              "Reputation & online presence management"
+            ].map((service, index) => (
               <div
                 key={index}
                 className="bg-white p-6 rounded-lg shadow-sm border hover:border-[#056FFD] transition-all"
               >
-                <p className="font-medium text-lg">{item}</p>
+                <p className="font-medium text-lg">{service}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Design & Development Process */}
+      {/* Branding Process */}
       <section className="bg-white py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#1A356A] mb-12">
-            Our Design & Development Process
+            Our Personal Branding Process
           </h2>
 
           <ul className="space-y-6 max-w-3xl">
             {[
-              "Requirement analysis & business understanding",
-              "UI/UX wireframing and visual design",
-              "Frontend & backend development",
-              "Content integration & SEO setup",
-              "Cross-browser & device testing",
-              "Deployment, training & ongoing support"
+              "Personal discovery & goal alignment",
+              "Audience & industry research",
+              "Brand messaging & positioning framework",
+              "Visual and content identity creation",
+              "Platform setup & optimization",
+              "Ongoing growth, monitoring & refinement"
             ].map((step, i) => (
               <li key={i} className="flex items-start gap-4">
                 <span className="w-3 h-3 mt-2 rounded-full bg-[#056FFD]"></span>
@@ -120,17 +122,17 @@ const WebDesignAndDevelopment = () => {
       <section className="bg-[#CAE9FF] py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#1A356A] mb-10 text-center">
-            Why Choose Data IT
+            Why Choose Data IT for Personal Branding
           </h2>
 
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              "Custom-designed websites — no templates",
-              "Modern UI/UX with business focus",
-              "SEO-optimized structure from day one",
-              "Secure, scalable, and maintainable code",
-              "Clear communication & timely delivery",
-              "Long-term maintenance & support"
+              "Tailored branding for individuals, not templates",
+              "Professional storytelling & positioning",
+              "Experience with founders & executives",
+              "Platform-specific branding strategies",
+              "Clear communication & measurable growth",
+              "Long-term personal brand support"
             ].map((reason, idx) => (
               <div key={idx} className="bg-white p-6 rounded-lg shadow-sm">
                 <p className="font-medium">{reason}</p>
@@ -145,17 +147,17 @@ const WebDesignAndDevelopment = () => {
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
           <div>
             <h3 className="text-3xl font-bold">
-              Ready to Build a High-Impact Website?
+              Ready to Build a Powerful Personal Brand?
             </h3>
             <p className="text-[#B1DAF8] mt-2">
-              Let’s design and develop a website that represents your business perfectly.
+              Let Data IT help you stand out with confidence and clarity.
             </p>
           </div>
-           <Link
-            to="/contact">
-          <button className="bg-[#056FFD] hover:bg-[#330FEE] transition-all px-10 h-14 rounded-lg font-semibold text-lg shadow-lg">
-            Request a Free Consultation
-          </button>
+          <Link
+            to="/contact"
+            className="bg-[#056FFD] hover:bg-[#330FEE] transition-all px-10 h-14 rounded-lg font-semibold text-lg shadow-lg inline-flex items-center justify-center"
+          >
+            Start Personal Branding
           </Link>
         </div>
       </section>
@@ -164,4 +166,4 @@ const WebDesignAndDevelopment = () => {
   );
 };
 
-export default WebDesignAndDevelopment;
+export default Exports;
