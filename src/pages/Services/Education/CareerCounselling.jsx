@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import image from "../../../assets/Career.png"; 
 import SEO from '../../../components/SEO/SEO';
 
 const CareerCounselling = () => {
@@ -51,12 +52,12 @@ const CareerCounselling = () => {
   <div className="w-full md:w-1/2 flex justify-center">
 
 
-    <img
-      src="https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Service/SEO_TravelAgents-min.jpeg"
-      alt="WebDesign And Development"
-      className="w-3/4 h-3/4 object-contain"
-      loading="lazy"
-    />
+   <img
+  src={image}
+  alt="WebDesign And Development"
+  className="w-3/4 h-3/4 object-contain"
+  loading="lazy"
+/>
 
 
 </div>

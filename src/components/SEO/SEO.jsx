@@ -1,17 +1,13 @@
-// src/components/SEO/SEO.jsx
-
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import PropTypes from "prop-types";
 
 const SEO = ({
-  title,
   description,
   keywords,
   image,
   url,
   type = "website",
-  siteName = "Moin Consultancy",
   twitterHandle = "",
   author = "Moin Consultancy",
   language = "en",
@@ -24,9 +20,10 @@ const SEO = ({
     ? `${baseUrl}${url}`
     : baseUrl;
 
-  // Handle local images and external images
   const finalImage =
-    image && (image.startsWith("http://") || image.startsWith("https://"))
+    image &&
+    (image.startsWith("http://") ||
+      image.startsWith("https://"))
       ? image
       : image
       ? `${baseUrl}${image}`
@@ -43,10 +40,8 @@ const SEO = ({
 
   return (
     <Helmet>
-      {/* Page Title */}
-      <title>
-        {title ? `${title} | Moin Consultancy` : "Moin Consultancy"}
-      </title>
+      {/* Website Title */}
+      <title>Moin Consultancy</title>
 
       {/* Basic SEO */}
       <meta
@@ -82,7 +77,7 @@ const SEO = ({
 
       <meta
         property="og:title"
-        content={title || "Moin Consultancy"}
+        content="Moin Consultancy"
       />
 
       <meta
@@ -134,7 +129,7 @@ const SEO = ({
 
       <meta
         name="twitter:title"
-        content={title || "Moin Consultancy"}
+        content="Moin Consultancy"
       />
 
       <meta
@@ -156,13 +151,11 @@ const SEO = ({
 };
 
 SEO.propTypes = {
-  title: PropTypes.string,
   description: PropTypes.string,
   keywords: PropTypes.string,
   image: PropTypes.string,
   url: PropTypes.string,
   type: PropTypes.string,
-  siteName: PropTypes.string,
   twitterHandle: PropTypes.string,
   author: PropTypes.string,
   language: PropTypes.string,
