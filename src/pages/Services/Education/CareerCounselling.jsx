@@ -9,6 +9,7 @@ import {
   Compass,
   Map,
   TrendingUp,
+  Route
 } from "lucide-react";
 
 const CareerCounselling = () => {
@@ -30,7 +31,7 @@ const CareerCounselling = () => {
           BREADCRUMBS
       ====================================================== */}
       <div className="container mx-auto px-4 py-6 text-sm">
-        <ul className="flex flex-wrap gap-2 text-[#1A356A] opacity-70">
+        <ul className="flex flex-wrap gap-2 text-[#A202F0] opacity-70">
           <li>
             <Link
               to="/"
@@ -89,23 +90,7 @@ Our personalised career counselling approach connects your education choices wit
 
         </div>
       </section>
-      <div className="bg-[white] rounded-xl p-8 md:p-10">
-
-  <h3 className="text-2xl md:text-3xl font-bold text-[#A202F0] mb-5">
-    Discover the Right Career Direction
-  </h3>
-
-  <p className="text-gray-600 leading-relaxed text-lg">
-    With countless courses, specialisations, industries, and global
-    opportunities available, choosing the right path can be challenging.
-  </p>
-
-  <p className="text-gray-600 leading-relaxed text-lg mt-4">
-    Our counsellors help you understand your options, identify the right
-    direction, and create a practical roadmap aligned with your long-term goals.
-  </p>
-
-</div>
+   
 
 
 
@@ -149,7 +134,7 @@ Our personalised career counselling approach connects your education choices wit
                   "Identify suitable career fields, courses, universities, and industry opportunities.",
               },
               {
-                icon: Map,
+                icon: Route,
                 title: "Strategise",
                 description:
                   "Develop a personalised education and career roadmap.",
@@ -224,7 +209,7 @@ Our personalised career counselling approach connects your education choices wit
       {/* =====================================================
          
       ====================================================== */}
-      <section className="bg-[#EFF0F6] py-20">
+      <section className="bg-[white] py-20">
         <div className="container mx-auto px-4">
 
           <h2 className="text-3xl md:text-4xl font-bold text-[#A202F0] mb-12 text-center">
@@ -247,12 +232,11 @@ Our personalised career counselling approach connects your education choices wit
               <div
                 key={idx}
                 className="
-                  bg-white
+                  bg-[#EFF0F6]
                   p-5
                   rounded-xl
                   shadow-sm
                   border-l-4
-                  border-[#A202F0]
                   hover:shadow-md
                   hover:-translate-y-1
                   transition-all
@@ -372,17 +356,7 @@ Our personalised career counselling approach connects your education choices wit
 
           <div className="max-w-5xl mx-auto">
 
-            <h2 className="text-3xl md:text-4xl font-bold text-[#A202F0] mb-6">
-            From Potential to Possibility
-            </h2>
-
-            <p className="text-gray-600 text-lg leading-relaxed mb-12">
-            Your career is more than a course or a qualification. It is a journey shaped by choices, skills, experience, and opportunity.
-            </p>
-            <p className="text-gray-600 text-lg leading-relaxed mb-12">
-            At Moin Consultancy, we help you make those choices with greater clarity and confidence.
-            </p>
-
+          
             {/* Sub Heading */}
             <div className="bg-[#EFF0F6] rounded-xl p-8 md:p-10">
 
@@ -426,7 +400,8 @@ Our personalised career counselling approach connects your education choices wit
             <Link
               to="/contact"
               className="
-                bg-black
+                bg-[white]
+               text-black
                 hover:bg-[#A202F0]
                 transition-all
                 px-10
