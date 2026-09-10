@@ -1,5 +1,5 @@
 import React from "react";
-import aboutImage from "../../assets/About2.png";
+import aboutImage from "../../assets/partner1.png";
 
 const Approach = () => {
   return (
@@ -22,7 +22,7 @@ const Approach = () => {
             <img
               src={aboutImage}
               alt="Moin Consultancy Global Partnership Approach"
-              className="w-full h-auto lg:h-full max-h-[650px] object-cover hover:scale-105 transition-transform duration-500"
+              className="w-full h-auto lg:h-full max-h-[350px] object-cover hover:scale-105 transition-transform duration-500"
             />
           </div>
         </div>

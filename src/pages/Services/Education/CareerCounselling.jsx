@@ -64,21 +64,17 @@ const CareerCounselling = () => {
           <div className="w-full md:w-1/2 space-y-6">
 
             <h1 className="text-4xl md:text-5xl font-bold text-[#A202F0] leading-tight">
-              Your Career. Your Potential. Your Future.
+             Clarity for Your Career. Confidence for Your Future
             </h1>
 
             <p className="text-lg leading-relaxed text-gray-700">
-              At Moin Consultancy, our career counselling services help
-              students, graduates, and working professionals make informed
-              and confident career decisions.
+             At Moin Consultancy, we help students, graduates, and working professionals make informed career decisions based on their strengths, interests, skills, aspirations, and evolving industry opportunities.
             </p>
 
             <p className="leading-relaxed text-gray-600">
-              We understand your interests, strengths, academic background,
-              and career aspirations to help you identify the right education,
-              skills, career pathway, and global opportunities.
+          
             </p>
-
+Our personalised career counselling approach connects your education choices with real-world career pathways, helping you move forward with clarity and purpose.
           </div>
 
           {/* Right Image */}
@@ -93,25 +89,40 @@ const CareerCounselling = () => {
 
         </div>
       </section>
+      <div className="bg-[white] rounded-xl p-8 md:p-10">
+
+  <h3 className="text-2xl md:text-3xl font-bold text-[#A202F0] mb-5">
+    Discover the Right Career Direction
+  </h3>
+
+  <p className="text-gray-600 leading-relaxed text-lg">
+    With countless courses, specialisations, industries, and global
+    opportunities available, choosing the right path can be challenging.
+  </p>
+
+  <p className="text-gray-600 leading-relaxed text-lg mt-4">
+    Our counsellors help you understand your options, identify the right
+    direction, and create a practical roadmap aligned with your long-term goals.
+  </p>
+
+</div>
+
+
+
 
       {/* =====================================================
           MAKE THE RIGHT CHOICE
       ====================================================== */}
-      <section className="bg-[#EFF0F6] py-20">
+      
+      <section className="bg-[white] py-20">
         <div className="container mx-auto px-4">
 
           {/* Heading */}
           <div className="max-w-4xl mx-auto text-center mb-12">
 
             <h2 className="text-3xl md:text-4xl font-bold text-[#A202F0] mb-5">
-              Make the Right Choice for Your Future
+             Our Career Counselling Process
             </h2>
-
-            <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-              Choosing a career is one of the most important decisions you
-              will make. Our expert guidance helps you move beyond uncertainty
-              and build a clear, practical career roadmap.
-            </p>
 
           </div>
 
@@ -139,15 +150,21 @@ const CareerCounselling = () => {
               },
               {
                 icon: Map,
-                title: "Plan",
+                title: "Strategise",
                 description:
-                  "Create a personalised education and career roadmap aligned with your goals.",
+                  "Develop a personalised education and career roadmap.",
+              },
+              {
+                icon: Map,
+                title: "Prepare",
+                description:"Build the skills, knowledge, and professional profile required for your chosen pathway."
+                ,
               },
               {
                 icon: TrendingUp,
                 title: "Progress",
                 description:
-                  "Develop the skills and strategies required to move confidently toward your chosen career.",
+                  "Support you as you move toward higher education, employment, or global career opportunities.",
               },
             ].map((step, index) => {
               const Icon = step.icon;
@@ -202,66 +219,30 @@ const CareerCounselling = () => {
         </div>
       </section>
 
-      {/* =====================================================
-          CAREER DECISIONS
-      ====================================================== */}
-      <section className="bg-white py-20">
-        <div className="container mx-auto px-4">
-
-          <div className="max-w-5xl mx-auto">
-
-            <h2 className="text-3xl md:text-4xl font-bold text-[#A202F0] mb-6">
-              Career Decisions Backed by Insight
-            </h2>
-
-            <p className="text-gray-600 text-lg leading-relaxed mb-12">
-              Our approach combines personalised counselling, education
-              pathways, industry trends, and career opportunities to help
-              you make decisions with greater clarity.
-            </p>
-
-            {/* Sub Heading */}
-            <div className="bg-[#EFF0F6] rounded-xl p-8 md:p-10">
-
-              <h3 className="text-2xl md:text-3xl font-bold text-[#25252B] mb-5">
-                From Confusion to Clarity. From Education to Career.
-              </h3>
-
-              <p className="text-gray-600 leading-relaxed text-lg">
-                Whether you are choosing your academic stream, selecting a
-                university, exploring international education, changing your
-                career, or planning your professional growth, our counsellors
-                provide structured guidance to help you move forward with
-                confidence.
-              </p>
-
-            </div>
-
-          </div>
-        </div>
-      </section>
+      
 
       {/* =====================================================
-          WHAT WE HELP YOU WITH
+         
       ====================================================== */}
       <section className="bg-[#EFF0F6] py-20">
         <div className="container mx-auto px-4">
 
           <h2 className="text-3xl md:text-4xl font-bold text-[#A202F0] mb-12 text-center">
-            What We Help You With
+          Our Career Guidance Covers
           </h2>
 
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
 
             {[
               "Career & Course Selection",
-              "Stream & Specialisation Guidance",
-              "Study Abroad & International Education",
-              "University & Programme Selection",
-              "Career Transition Planning",
-              "Skill & Industry-Oriented Career Planning",
-              "Professional Development",
-              "International Career Pathways",
+"Stream & Specialisation Guidance",
+"Higher Education Planning",
+"University & Programme Selection",
+"Study Abroad Guidance",
+"Career Transition Planning",
+"Skill & Industry-Oriented Career Planning",
+"Professional Development",
+
             ].map((reason, idx) => (
               <div
                 key={idx}
@@ -290,6 +271,130 @@ const CareerCounselling = () => {
                 </div>
               </div>
             ))}
+
+          </div>
+        </div>
+      </section>
+      
+          {/* Heading */}
+          <div className="max-w-4xl mx-auto text-center mb-12">
+
+            <h2 className="text-3xl md:text-4xl font-bold text-[#A202F0] mb-5">
+     Why Moin Consultancy?
+            </h2>
+
+          </div>
+
+          {/* Career Counselling Approach Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+            {[
+              {
+              
+                title: "Personalised Guidance",
+                description:
+                  "Every career journey is different. Our recommendations are aligned with your individual goals and profile. ",
+              },
+              {
+               
+                title: "Industry-Oriented Perspective",
+                description:
+                  "We consider evolving industry requirements and emerging career opportunities when planning your pathway.",
+              },
+              {
+               
+                title: "Education + Career Alignment",
+                description:
+                  "We connect your academic choices with practical career objectives.",
+              },
+              {
+             
+                title: "Global Opportunities",
+                description:
+                  "Where relevant, we help you explore international education and career pathways.",
+              },
+              {
+            
+                title: "Long-Term Approach",
+                description:"Our focus is not just on your next decision, but on building a sustainable career direction."
+                ,
+              },
+              
+            ].map((step, index) => {
+              const Icon = step.icon;
+
+              return (
+                <div
+                  key={index}
+                  className="
+                    bg-white
+                    rounded-xl
+                    shadow-md
+                    border-t-4
+                    border-[#A202F0]
+                    p-6
+                    min-h-[280px]
+                    flex
+                    flex-col
+                    items-center
+                    justify-center
+                    text-center
+                    hover:-translate-y-2
+                    hover:shadow-xl
+                    transition-all
+                    duration-300
+                  "
+                >
+
+                
+
+                  {/* Title */}
+                  <h3 className="text-xl font-semibold text-[#25252B] mb-3">
+                    {step.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-gray-500 text-base leading-relaxed max-w-xs">
+                    {step.description}
+                  </p>
+
+                </div>
+              );
+            })}
+
+          </div>
+      
+      {/* =====================================================
+          CAREER DECISIONS
+      ====================================================== */}
+      <section className="bg-white py-20">
+        <div className="container mx-auto px-4">
+
+          <div className="max-w-5xl mx-auto">
+
+            <h2 className="text-3xl md:text-4xl font-bold text-[#A202F0] mb-6">
+            From Potential to Possibility
+            </h2>
+
+            <p className="text-gray-600 text-lg leading-relaxed mb-12">
+            Your career is more than a course or a qualification. It is a journey shaped by choices, skills, experience, and opportunity.
+            </p>
+            <p className="text-gray-600 text-lg leading-relaxed mb-12">
+            At Moin Consultancy, we help you make those choices with greater clarity and confidence.
+            </p>
+
+            {/* Sub Heading */}
+            <div className="bg-[#EFF0F6] rounded-xl p-8 md:p-10">
+
+              <h3 className="text-2xl md:text-3xl font-bold text-[#25252B] mb-5">
+               Discover Your Direction. Build Your Path. Shape Your Future.
+              </h3>
+
+              <p className="text-gray-600 leading-relaxed text-lg">
+               
+              </p>
+
+            </div>
 
           </div>
         </div>
@@ -336,7 +441,7 @@ const CareerCounselling = () => {
                 whitespace-nowrap
               "
             >
-              Start Career Counselling
+Talk to Our Career Counselling Team →
             </Link>
 
           </div>
