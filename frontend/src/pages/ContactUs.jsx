@@ -66,8 +66,27 @@ const ContactUs = () => {
                 }
             );
 
-            const data = await response.json();
+            // Read response safely
+            const text = await response.text();
 
+            console.log('Contact API Status:', response.status);
+            console.log('Contact API Response:', text);
+
+            let data = {};
+
+            // Only parse JSON when response contains something
+            if (text) {
+                try {
+                    data = JSON.parse(text);
+                } catch (jsonError) {
+                    console.error(
+                        'Server returned invalid JSON:',
+                        jsonError
+                    );
+                }
+            }
+
+            // Handle API errors
             if (!response.ok) {
                 throw new Error(
                     data.message || 'Failed to submit contact form.'
@@ -77,7 +96,9 @@ const ContactUs = () => {
             // Success message
             await Swal.fire({
                 title: 'Success!',
-                text: 'Your message has been submitted successfully.',
+                text:
+                    data.message ||
+                    'Your message has been submitted successfully.',
                 icon: 'success',
                 confirmButtonColor: '#A202F0',
             });

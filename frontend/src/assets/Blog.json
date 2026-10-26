@@ -1,1 +1,105 @@
-[]
+
+[
+  {
+    "id": 47,
+    "title": "Why Study Abroad? Top Reasons to Take the Leap",
+    "summary": "Studying abroad is more than just earning a degree — it's a transformative experience that shapes your career, personality, and worldview.",
+    "image_url": "../assets/girl1.png",
+    "category": "Education",
+    "author_name": "Moin Consultancy",
+  
+    "content": [
+      {
+        "heading": "1. World-Class Education & Global Recognition",
+        "paragraphs": [
+          "Universities in the USA, UK, Canada, Australia, and Germany consistently rank among the best in the world. A degree from these institutions carries international weight and opens doors to top employers globally. You gain access to cutting-edge research, modern infrastructure, and faculty who are leaders in their fields."
+        ]
+      },
+      {
+        "heading": "2. Career Opportunities & Higher Earning Potential",
+        "paragraphs": [
+          "International graduates are highly sought after by multinational companies. Studying abroad gives you access to post-study work permits (like the UK's Graduate Route or Canada's PGWP), internships with global firms, and networking opportunities that simply aren't available back home. Statistics show that international graduates earn 25–40% more than their domestic counterparts over a lifetime."
+        ]
+      },
+      {
+        "heading": "3. Personal Growth & Independence",
+        "paragraphs": [
+          "Living in a new country pushes you out of your comfort zone. You learn to manage finances, cook, navigate public transport, and solve problems independently. These life skills make you resilient, adaptable, and confident — qualities every employer values."
+        ]
+      },
+      {
+        "heading": "4. Cultural Exposure & Global Network",
+        "paragraphs": [
+          "You'll meet people from dozens of countries, experience new traditions, and develop a truly global perspective. This cultural intelligence is increasingly important in today's interconnected world. The friendships and professional connections you build abroad often last a lifetime."
+        ]
+      },
+      {
+        "heading": "5. Pathway to Permanent Residency",
+        "paragraphs": [
+          "Many countries offer immigration pathways for international students. Canada's Express Entry, Australia's Skilled Migration, and Germany's Job Seeker Visa all favor graduates who studied locally. Studying abroad can be your first step toward building a life in a new country."
+        ]
+      },
+      {
+        "heading": "6. Scholarship & Financial Aid Opportunities",
+        "paragraphs": [
+          "Contrary to popular belief, studying abroad can be affordable. Many universities offer merit-based scholarships, teaching assistantships, and need-based aid for international students. Countries like Germany and Norway offer tuition-free or low-cost education at public universities."
+        ]
+      },
+      {
+        "heading": "How Moin Consultancy Helps",
+        "paragraphs": [
+          "At Moin Consultancy, we guide you through every step — from shortlisting universities and crafting compelling SOPs to visa applications and pre-departure orientation. Our expert counsellors have helped hundreds of students achieve their study abroad dreams across 15+ countries."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "title": "Credit Transfer Program for Engineering Students (As per UGC Guidelines)",
+    "summary": "At Moin Consultancy, we offer a structured Credit Transfer Program for engineering students in India, aligned with UGC regulations and academic standards.",
+    "image_url": "../assets/credit.png",
+    "category": "Education",
+    "author_name": "Moin Consultancy",
+  
+    "content": [
+      {
+        "heading": "Introduction",
+        "paragraphs": [
+          "At Moin Consultancy, we offer a structured Credit Transfer Program for engineering students in India, aligned with UGC regulations and academic standards. This pathway allows students pursuing B.Tech/BE programs to transfer eligible academic credits and continue their education at recognized institutions in India or abroad—without losing academic progress.",
+          "As per UGC guidelines under the Choice Based Credit System (CBCS) and Academic Bank of Credits (ABC), students can accumulate and transfer credits between approved institutions, provided equivalence and accreditation criteria are met. This ensures a flexible, transparent, and student-centric academic journey."
+        ]
+      },
+      {
+        "heading": "Key Benefits",
+        "paragraphs": [],
+        "bullets": [
+          "Continue your engineering degree without restarting",
+          "Transfer credits through UGC-recognized frameworks (ABC/CBCS)",
+          "Save time and reduce academic duplication",
+          "Access national and international academic pathways",
+          "Enhance career prospects with recognized qualifications"
+        ]
+      },
+      {
+        "heading": "Our Support",
+        "paragraphs": [
+          "At Moin Consultancy, we ensure your credit transfer process is compliant and smooth:"
+        ],
+        "bullets": [
+          "Academic profile evaluation as per UGC norms",
+          "Mapping of subjects and credit equivalence",
+          "University shortlisting (India & Abroad)",
+          "Documentation and application support",
+          "Guidance on credit transfer through ABC portal",
+          "Visa and transition support for international transfers"
+        ]
+      },
+      {
+        "heading": "Build Your Engineering Career with Flexibility",
+        "paragraphs": [
+          "With the right guidance and compliance, credit transfer becomes a smart and efficient route to complete your engineering degree while exploring broader academic opportunities."
+        ]
+      }
+    ]
+  }
+]

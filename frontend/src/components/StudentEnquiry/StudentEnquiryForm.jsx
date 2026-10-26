@@ -1,486 +1,340 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
+import { Send, User, Mail, Phone, GraduationCap, Globe2, MessageSquare } from "lucide-react";
 
 const StudentEnquiryForm = () => {
-    const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    course: "",
+    destination: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.phone ||
+      !formData.course ||
+      !formData.destination
+    ) {
+      Swal.fire({
+        icon: "warning",
+        title: "Required Fields",
+        text: "Please fill in all required fields.",
+        confirmButtonColor: "#A202F0",
+      });
+      return;
+    }
+
+    try {
+      setLoading(true);
+
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/student-enquiry`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      const text = await response.text();
+
+      let data = {};
+
+      if (text) {
+        try {
+          data = JSON.parse(text);
+        } catch (error) {
+          console.error("Invalid JSON response:", text);
+        }
+      }
+
+      if (!response.ok) {
+        throw new Error(
+          data.message || "Failed to submit enquiry."
+        );
+      }
+
+      Swal.fire({
+        icon: "success",
+        title: "Enquiry Submitted!",
+        text:
+          data.message ||
+          "Thank you! Our team will contact you shortly.",
+        confirmButtonColor: "#A202F0",
+      });
+
+      setFormData({
         name: "",
         email: "",
         phone: "",
-        country: "",
         course: "",
-        qualification: "",
-        graduationYear: "",
-        intake: "",
+        destination: "",
         message: "",
-    });
+      });
+    } catch (error) {
+      console.error("Student Enquiry Error:", error);
 
-    const [loading, setLoading] = useState(false);
+      Swal.fire({
+        icon: "error",
+        title: "Submission Failed",
+        text:
+          error.message ||
+          "Unable to submit your enquiry. Please try again.",
+        confirmButtonColor: "#A202F0",
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
+  return (
+    <section className="bg-white py-12 md:py-16">
+      <div className="container mx-auto px-4">
 
-        setFormData((prev) => ({
-            ...prev,
-            [name]: value,
-        }));
-    };
+        {/* Section Heading */}
+        <div className="text-center mb-10">
+          <h4 className="text-3xl font-bold text-[#A202F0] mb-4">
+            Student Enquiry
+          </h4>
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+          <div className="w-16 h-1 bg-[#A202F0] rounded-full mx-auto"></div>
 
-        if (
-            !formData.name ||
-            !formData.email ||
-            !formData.phone
-        ) {
-            Swal.fire({
-                icon: "warning",
-                title: "Required Fields",
-                text: "Please enter your name, email and phone number.",
-                confirmButtonColor: "#A202F0",
-            });
+          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+            Have questions about studying abroad? Share your details with us
+            and our education experts will get in touch with you.
+          </p>
+        </div>
 
-            return;
-        }
+        {/* Main Form Card */}
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-[#EFF0F6] rounded-2xl shadow-md border-t-4 border-[#A202F0] p-6 md:p-10">
 
-        try {
-            setLoading(true);
+            <form onSubmit={handleSubmit}>
 
-            const response = await fetch(
-                `${import.meta.env.VITE_API_URL}/api/student-enquiry`,
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(formData),
-                }
-            );
+              {/* First Row */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-            const data = await response.json();
+                {/* Name */}
+                <div>
+                  <label className="block text-sm font-semibold text-[#25252B] mb-2">
+                    Full Name <span className="text-[#A202F0]">*</span>
+                  </label>
 
-            if (!response.ok) {
-                throw new Error(
-                    data.message ||
-                        "Unable to submit enquiry."
-                );
-            }
+                  <div className="relative">
+                    <User
+                      size={19}
+                      className="absolute left-4 top-1/2 -translate-y-1/2 text-[#A202F0]"
+                    />
 
-            Swal.fire({
-                icon: "success",
-                title: "Enquiry Submitted!",
-                text:
-                    "Thank you for your interest. Our counselling team will contact you soon.",
-                confirmButtonColor: "#A202F0",
-            });
-
-            setFormData({
-                name: "",
-                email: "",
-                phone: "",
-                country: "",
-                course: "",
-                qualification: "",
-                graduationYear: "",
-                intake: "",
-                message: "",
-            });
-        } catch (error) {
-            console.error(
-                "Student Enquiry Error:",
-                error
-            );
-
-            Swal.fire({
-                icon: "error",
-                title: "Submission Failed",
-                text:
-                    error.message ||
-                    "Unable to submit your enquiry. Please try again.",
-                confirmButtonColor: "#A202F0",
-            });
-        } finally {
-            setLoading(false);
-        }
-    };
-
-    return (
-        <section
-            style={{
-                padding: "70px 20px",
-                background: "#EFF0F6",
-            }}
-        >
-            <div
-                style={{
-                    maxWidth: "900px",
-                    margin: "0 auto",
-                }}
-            >
-                {/* Heading */}
-                <div
-                    style={{
-                        textAlign: "center",
-                        marginBottom: "40px",
-                    }}
-                >
-                    <p
-                        style={{
-                            color: "#A202F0",
-                            fontWeight: "600",
-                            fontSize: "15px",
-                            marginBottom: "10px",
-                            textTransform: "uppercase",
-                            letterSpacing: "1px",
-                        }}
-                    >
-                        Study Abroad
-                    </p>
-
-                    <h2
-                        style={{
-                            color: "#25252B",
-                            fontSize: "36px",
-                            marginBottom: "15px",
-                            fontFamily:
-                                "Futura, Trebuchet MS, Arial, sans-serif",
-                        }}
-                    >
-                        Start Your Study Abroad Journey
-                    </h2>
-
-                    <p
-                        style={{
-                            color: "#555",
-                            fontSize: "16px",
-                            lineHeight: "1.7",
-                            maxWidth: "650px",
-                            margin: "0 auto",
-                        }}
-                    >
-                        Share your details with us and our
-                        counselling team will help you explore
-                        suitable study-abroad opportunities.
-                    </p>
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Enter your full name"
+                      className="w-full h-12 pl-11 pr-4 rounded-lg bg-white border border-gray-200 focus:border-[#A202F0] focus:ring-2 focus:ring-[#A202F0]/20 outline-none transition-all"
+                    />
+                  </div>
                 </div>
 
-                {/* Form Card */}
-                <form
-                    onSubmit={handleSubmit}
-                    style={{
-                        background: "#FFFFFF",
-                        padding: "40px",
-                        borderRadius: "24px",
-                        boxShadow:
-                            "0 15px 45px rgba(0, 0, 0, 0.08)",
-                    }}
+                {/* Email */}
+                <div>
+                  <label className="block text-sm font-semibold text-[#25252B] mb-2">
+                    Email Address <span className="text-[#A202F0]">*</span>
+                  </label>
+
+                  <div className="relative">
+                    <Mail
+                      size={19}
+                      className="absolute left-4 top-1/2 -translate-y-1/2 text-[#A202F0]"
+                    />
+
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="Enter your email"
+                      className="w-full h-12 pl-11 pr-4 rounded-lg bg-white border border-gray-200 focus:border-[#A202F0] focus:ring-2 focus:ring-[#A202F0]/20 outline-none transition-all"
+                    />
+                  </div>
+                </div>
+
+                {/* Phone */}
+                <div>
+                  <label className="block text-sm font-semibold text-[#25252B] mb-2">
+                    Phone Number <span className="text-[#A202F0]">*</span>
+                  </label>
+
+                  <div className="relative">
+                    <Phone
+                      size={19}
+                      className="absolute left-4 top-1/2 -translate-y-1/2 text-[#A202F0]"
+                    />
+
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="Enter your phone number"
+                      className="w-full h-12 pl-11 pr-4 rounded-lg bg-white border border-gray-200 focus:border-[#A202F0] focus:ring-2 focus:ring-[#A202F0]/20 outline-none transition-all"
+                    />
+                  </div>
+                </div>
+
+                {/* Course */}
+                <div>
+                  <label className="block text-sm font-semibold text-[#25252B] mb-2">
+                    Interested Course <span className="text-[#A202F0]">*</span>
+                  </label>
+
+                  <div className="relative">
+                    <GraduationCap
+                      size={20}
+                      className="absolute left-4 top-1/2 -translate-y-1/2 text-[#A202F0] pointer-events-none"
+                    />
+
+                    <select
+                      name="course"
+                      value={formData.course}
+                      onChange={handleChange}
+                      className="w-full h-12 pl-11 pr-4 rounded-lg bg-white border border-gray-200 focus:border-[#A202F0] focus:ring-2 focus:ring-[#A202F0]/20 outline-none transition-all appearance-none"
+                    >
+                      <option value="">Select Course</option>
+                      <option value="Undergraduate">
+                        Undergraduate
+                      </option>
+                      <option value="Postgraduate">
+                        Postgraduate
+                      </option>
+                      <option value="Masters">
+                        Masters
+                      </option>
+                      <option value="MBA">
+                        MBA
+                      </option>
+                      <option value="MS">
+                        MS
+                      </option>
+                      <option value="PhD">
+                        PhD
+                      </option>
+                      <option value="Other">
+                        Other
+                      </option>
+                    </select>
+                  </div>
+                </div>
+
+                {/* Destination */}
+                <div className="md:col-span-2">
+                  <label className="block text-sm font-semibold text-[#25252B] mb-2">
+                    Preferred Study Destination{" "}
+                    <span className="text-[#A202F0]">*</span>
+                  </label>
+
+                  <div className="relative">
+                    <Globe2
+                      size={20}
+                      className="absolute left-4 top-1/2 -translate-y-1/2 text-[#A202F0] pointer-events-none"
+                    />
+
+                    <select
+                      name="destination"
+                      value={formData.destination}
+                      onChange={handleChange}
+                      className="w-full h-12 pl-11 pr-4 rounded-lg bg-white border border-gray-200 focus:border-[#A202F0] focus:ring-2 focus:ring-[#A202F0]/20 outline-none transition-all appearance-none"
+                    >
+                      <option value="">
+                        Select Study Destination
+                      </option>
+                      <option value="USA">USA</option>
+                      <option value="UK">UK</option>
+                      <option value="Australia">Australia</option>
+                      <option value="Canada">Canada</option>
+                      <option value="New Zealand">
+                        New Zealand
+                      </option>
+                      <option value="Ireland">Ireland</option>
+                      <option value="Europe">Europe</option>
+                      <option value="UAE">UAE</option>
+                      <option value="Turkey">Turkey</option>
+                      <option value="Not Decided">
+                        Not Decided
+                      </option>
+                    </select>
+                  </div>
+                </div>
+
+                {/* Message */}
+                <div className="md:col-span-2">
+                  <label className="block text-sm font-semibold text-[#25252B] mb-2">
+                    Message
+                  </label>
+
+                  <div className="relative">
+                    <MessageSquare
+                      size={19}
+                      className="absolute left-4 top-4 text-[#A202F0]"
+                    />
+
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      rows="5"
+                      placeholder="Tell us about your education plans or requirements..."
+                      className="w-full pl-11 pr-4 py-3 rounded-lg bg-white border border-gray-200 focus:border-[#A202F0] focus:ring-2 focus:ring-[#A202F0]/20 outline-none transition-all resize-none"
+                    ></textarea>
+                  </div>
+                </div>
+
+              </div>
+
+              {/* Submit Button */}
+              <div className="flex justify-center mt-8">
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="bg-[#A202F0] hover:bg-black text-white transition-all px-10 h-14 rounded-lg font-semibold text-lg shadow-lg inline-flex items-center justify-center gap-3 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                    {/* Name + Email */}
-                    <div
-                        style={{
-                            display: "grid",
-                            gridTemplateColumns:
-                                "repeat(auto-fit, minmax(250px, 1fr))",
-                            gap: "20px",
-                            marginBottom: "20px",
-                        }}
-                    >
-                        <div>
-                            <label style={labelStyle}>
-                                Full Name *
-                            </label>
+                  {loading ? (
+                    "Submitting..."
+                  ) : (
+                    <>
+                      Submit Enquiry
+                      <Send size={19} />
+                    </>
+                  )}
+                </button>
+              </div>
 
-                            <input
-                                type="text"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                placeholder="Enter your full name"
-                                required
-                                style={inputStyle}
-                            />
-                        </div>
+            </form>
+          </div>
+        </div>
 
-                        <div>
-                            <label style={labelStyle}>
-                                Email *
-                            </label>
-
-                            <input
-                                type="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                placeholder="Enter your email"
-                                required
-                                style={inputStyle}
-                            />
-                        </div>
-                    </div>
-
-                    {/* Phone + Country */}
-                    <div
-                        style={{
-                            display: "grid",
-                            gridTemplateColumns:
-                                "repeat(auto-fit, minmax(250px, 1fr))",
-                            gap: "20px",
-                            marginBottom: "20px",
-                        }}
-                    >
-                        <div>
-                            <label style={labelStyle}>
-                                Phone Number *
-                            </label>
-
-                            <input
-                                type="tel"
-                                name="phone"
-                                value={formData.phone}
-                                onChange={handleChange}
-                                placeholder="Enter your phone number"
-                                required
-                                style={inputStyle}
-                            />
-                        </div>
-
-                        <div>
-                            <label style={labelStyle}>
-                                Preferred Country
-                            </label>
-
-                            <select
-                                name="country"
-                                value={formData.country}
-                                onChange={handleChange}
-                                style={inputStyle}
-                            >
-                                <option value="">
-                                    Select country
-                                </option>
-
-                                <option value="USA">
-                                    USA
-                                </option>
-
-                                <option value="UK">
-                                    UK
-                                </option>
-
-                                <option value="Canada">
-                                    Canada
-                                </option>
-
-                                <option value="Australia">
-                                    Australia
-                                </option>
-
-                                <option value="New Zealand">
-                                    New Zealand
-                                </option>
-
-                                <option value="Ireland">
-                                    Ireland
-                                </option>
-
-                                <option value="Europe">
-                                    Europe
-                                </option>
-
-                                <option value="UAE">
-                                    UAE
-                                </option>
-
-                                <option value="Turkey">
-                                    Turkey
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-
-                    {/* Course + Qualification */}
-                    <div
-                        style={{
-                            display: "grid",
-                            gridTemplateColumns:
-                                "repeat(auto-fit, minmax(250px, 1fr))",
-                            gap: "20px",
-                            marginBottom: "20px",
-                        }}
-                    >
-                        <div>
-                            <label style={labelStyle}>
-                                Course / Program
-                            </label>
-
-                            <input
-                                type="text"
-                                name="course"
-                                value={formData.course}
-                                onChange={handleChange}
-                                placeholder="Example: MS Computer Science"
-                                style={inputStyle}
-                            />
-                        </div>
-
-                        <div>
-                            <label style={labelStyle}>
-                                Highest Qualification
-                            </label>
-
-                            <input
-                                type="text"
-                                name="qualification"
-                                value={
-                                    formData.qualification
-                                }
-                                onChange={handleChange}
-                                placeholder="Example: B.Tech / MCA"
-                                style={inputStyle}
-                            />
-                        </div>
-                    </div>
-
-                    {/* Graduation Year + Intake */}
-                    <div
-                        style={{
-                            display: "grid",
-                            gridTemplateColumns:
-                                "repeat(auto-fit, minmax(250px, 1fr))",
-                            gap: "20px",
-                            marginBottom: "20px",
-                        }}
-                    >
-                        <div>
-                            <label style={labelStyle}>
-                                Year of Graduation
-                            </label>
-
-                            <input
-                                type="text"
-                                name="graduationYear"
-                                value={
-                                    formData.graduationYear
-                                }
-                                onChange={handleChange}
-                                placeholder="Example: 2025"
-                                style={inputStyle}
-                            />
-                        </div>
-
-                        <div>
-                            <label style={labelStyle}>
-                                Preferred Intake
-                            </label>
-
-                            <select
-                                name="intake"
-                                value={formData.intake}
-                                onChange={handleChange}
-                                style={inputStyle}
-                            >
-                                <option value="">
-                                    Select intake
-                                </option>
-
-                                <option value="January">
-                                    January
-                                </option>
-
-                                <option value="February">
-                                    February
-                                </option>
-
-                                <option value="May">
-                                    May
-                                </option>
-
-                                <option value="September">
-                                    September
-                                </option>
-
-                                <option value="October">
-                                    October
-                                </option>
-
-                                <option value="Other">
-                                    Other
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-
-                    {/* Message */}
-                    <div
-                        style={{
-                            marginBottom: "25px",
-                        }}
-                    >
-                        <label style={labelStyle}>
-                            Message
-                        </label>
-
-                        <textarea
-                            name="message"
-                            value={formData.message}
-                            onChange={handleChange}
-                            placeholder="Tell us about your study abroad plans..."
-                            rows="5"
-                            style={{
-                                ...inputStyle,
-                                resize: "vertical",
-                            }}
-                        />
-                    </div>
-
-                    {/* Submit */}
-                    <button
-                        type="submit"
-                        disabled={loading}
-                        style={{
-                            width: "100%",
-                            padding: "15px 25px",
-                            border: "none",
-                            borderRadius: "10px",
-                            background: "#A202F0",
-                            color: "#FFFFFF",
-                            fontSize: "16px",
-                            fontWeight: "600",
-                            cursor: loading
-                                ? "not-allowed"
-                                : "pointer",
-                            opacity: loading ? 0.7 : 1,
-                            transition: "0.3s",
-                        }}
-                    >
-                        {loading
-                            ? "Submitting..."
-                            : "Submit Enquiry"}
-                    </button>
-                </form>
-            </div>
-        </section>
-    );
-};
-
-const labelStyle = {
-    display: "block",
-    marginBottom: "8px",
-    color: "#25252B",
-    fontSize: "14px",
-    fontWeight: "600",
-};
-
-const inputStyle = {
-    width: "100%",
-    padding: "13px 15px",
-    border: "1px solid #ddd",
-    borderRadius: "8px",
-    outline: "none",
-    fontSize: "15px",
-    color: "#25252B",
-    background: "#FFFFFF",
-    boxSizing: "border-box",
+      </div>
+    </section>
+  );
 };
 
 export default StudentEnquiryForm;
